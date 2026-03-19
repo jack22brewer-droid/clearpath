@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn the fundamental tax differences between ISOs and NSOs, including how each is taxed, real-world examples, and a complete comparison for startup employees.">
+  <meta name="keywords" content="ISO, NSO, stock options, tax, startup, equity compensation">
+  <meta property="og:title" content="ISO vs NSO: Complete Tax Comparison for Startup Employees">
+  <meta property="og:description" content="Master the tax implications of Incentive Stock Options vs Non-Qualified Stock Options with real-world examples and actionable strategies.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.withclearpath.com/blog/iso-vs-nso-complete-tax-comparison">
+  <meta property="article:published_time" content="2026-03-19">
+  <meta name="author" content="ClearPath">
+  <link rel="canonical" href="https://www.withclearpath.com/blog/iso-vs-nso-complete-tax-comparison">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+  <title>ISO vs NSO: Complete Tax Comparison for Startup Employees | ClearPath</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAF8;
+      color: #1A1A2E;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E8E6E3;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0D7C66;
+      text-decoration: none;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1A1A2E;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0D7C66;
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 800px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      border-bottom: 3px solid #0D7C66;
+      padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: #5A5A6E;
+      font-weight: 500;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    /* Answer Box */
+    .answer-box {
+      background-color: #E8F5F0;
+      border-left: 4px solid #0D7C66;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .answer-box p {
+      margin: 0;
+    }
+
+    /* Article Body */
+    .article-body h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #1A1A2E;
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.8rem;
+      line-height: 1.8;
+    }
+
+    .article-body strong {
+      font-weight: 600;
+      color: #0D7C66;
+    }
+
+    /* Emphasis box */
+    .emphasis-box {
+      background-color: #FFFFFF;
+      border-left: 4px solid #E8734A;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #5A5A6E;
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+    }
+
+    .comparison-table thead {
+      background-color: #0D7C66;
+    }
+
+    .comparison-table th {
+      color: #FFFFFF;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #E8E6E3;
+    }
+
+    .comparison-table tbody tr:hover {
+      background-color: #E8F5F0;
+    }
+
+    /* Calculation Box */
+    .calculation-box {
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .calculation-box p {
+      margin-bottom: 0.5rem;
+    }
+
+    .calculation-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+    }
+
+    .calculation-label {
+      font-weight: 500;
+    }
+
+    .calculation-value {
+      font-weight: 600;
+      color: #0D7C66;
+    }
+
+    .calculation-total {
+      border-top: 2px solid #E8E6E3;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      margin-bottom: 2rem;
+      background-color: #FFFFFF;
+      padding: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid #E8E6E3;
+    }
+
+    .faq-item h3 {
+      font-family: 'Source Serif 4', serif;
+      color: #0D7C66;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background-color: #E8F5F0;
+      border: 2px solid #0D7C66;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .cta-box p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #5A5A6E;
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #E8734A;
+      color: #FFFFFF;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #d4622f;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #FFFFFF;
+      border-top: 1px solid #E8E6E3;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .footer-section a {
+      display: block;
+      color: #5A5A6E;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-section a:hover {
+      color: #0D7C66;
+    }
+
+    .footer-bottom {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid #E8E6E3;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5A5A6E;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero,
+      .container {
+        padding: 0 1rem;
+      }
+
+      .article-body h2 {
+        font-size: 1.5rem;
+      }
+
+      .comparison-table {
+        font-size: 0.9rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem;
+      }
+
+      .cta-box {
+        padding: 1.5rem;
+      }
+
+      .cta-box h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="https://www.withclearpath.com/" class="nav-brand">ClearPath</a>
+    <ul class="nav-links">
+      <li><a href="https://www.withclearpath.com/guides">Guides</a></li>
+      <li><a href="https://www.withclearpath.com/blog">Blog</a></li>
+      <li><a href="https://www.withclearpath.com/tools">Tools</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>ISO vs NSO: Complete Tax Comparison for Startup Employees</h1>
+    <div class="hero-meta">March 19, 2026 · 10 min read</div>
+  </header>
+
+  <!-- Main Content -->
+  <main class="container">
+    <!-- Answer Box -->
+    <div class="answer-box">
+      <p><strong>ISOs (Incentive Stock Options) and NSOs (Non-Qualified Stock Options) have fundamentally different tax treatments.</strong> ISOs are taxed at long-term capital gains rates (0–20%) if you hold for 1 year after exercise and 2 years after grant — but may trigger Alternative Minimum Tax at exercise. NSOs are taxed as ordinary income (up to 37% federal) on the spread at exercise, with taxes withheld immediately. For most startup employees, ISOs are more tax-efficient if you can afford to hold, but NSOs are simpler and have no AMT risk.</p>
+    </div>
+
+    <!-- Article Body -->
+    <article class="article-body">
+      <h2>The Core Difference in 30 Seconds</h2>
+      <p>Your company issued you stock options. Now comes the question: are they ISOs or NSOs? And why does it matter?</p>
+      <p>The answer lies in the tax code. <strong>ISOs (Incentive Stock Options) receive preferential tax treatment,</strong> but come with strings attached. <strong>NSOs (Non-Qualified Stock Options) are simpler but more expensive</strong> in the best-case scenario. Let's break down what makes them different:</p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>ISOs</th>
+            <th>NSOs</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Tax at Exercise</strong></td>
+            <td>No regular income tax (AMT applies)</td>
+            <td>Ordinary income on spread</td>
+          </tr>
+          <tr>
+            <td><strong>Tax Rate (Long-term)</strong></td>
+            <td>Capital gains: 0%, 15%, or 20%</td>
+            <td>Capital gains: 0%, 15%, or 20%</td>
+          </tr>
+          <tr>
+          <tr>
+            <td><strong>Who Can Receive</strong></td>
+            <td>Employees only</td>
+            <td>Employees, contractors, advisors</td>
+          </tr>
+          <tr>
+            <td><strong>Exercise Window Post-Termination</strong></td>
+            <td>90 days</td>
+            <td>Typically 10 years (check agreement)</td>
+          </tr>
+          <tr>
+            <td><strong>AMT Risk</strong></td>
+            <td>Yes</td>
+            <td>No</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>How ISOs Are Taxed — Step by Step</h2>
+      <p>ISOs are designed to reward long-term holders. The tax code gives them special treatment — but only if you follow the rules.</p>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Grant</h3>
+      <p>Nothing happens tax-wise. You receive the options. No income reported. No W-2. You just wait.</p>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Exercise</h3>
+      <p>Here's where ISOs get interesting. You typically don't owe regular income tax on the spread. But — and this is critical — <strong>the spread becomes an "AMT preference item."</strong></p>
+
+      <div class="emphasis-box">
+        <strong>What is AMT?</strong> Think of it as a parallel tax system. The IRS says: "Pay whichever is higher — your regular tax or your AMT." The spread on your ISOs gets added to your AMT calculation. If your AMT liability exceeds your regular tax liability, you owe the difference. And here's the kicker: you may owe AMT even if you haven't sold the stock yet.
+      </div>
+
+      <p><strong>Example:</strong> You exercise 10,000 ISOs with a $1 strike price when the stock is worth $10. That's $90,000 in AMT income ($10 - $1 = $9 spread × 10,000 options). This might push your total income high enough to trigger AMT. You could owe $20,000–$30,000 in taxes — right now — even though you haven't sold a single share.</p>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Sale (Qualifying Disposition)</h3>
+      <p>If you hold the stock for <strong>at least 1 year after exercise AND 2 years from the grant date,</strong> you qualify for long-term capital gains treatment. Your entire gain — from strike price to sale price — is taxed as a long-term capital gain.</p>
+
+      <p><strong>Example:</strong> You bought at $1 and sold at $20. Your gain is $19 per share. That $19 is taxed at capital gains rates (0%, 15%, or 20% federally — much better than ordinary income rates).</p>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Sale (Disqualifying Disposition)</h3>
+      <p>If you sell before meeting the 1-year / 2-year hold requirement, your ISO loses its tax advantage. The spread at exercise becomes ordinary income. Everything above that is capital gains (short-term or long-term depending on how long you held).</p>
+
+      <p><strong>Example:</strong> You exercised at $10, then sold at $20 after only 6 months. The $9 spread becomes ordinary income (taxed up to 37% federally). The additional $10 gain is a short-term capital gain (taxed as ordinary income). Essentially, you lose the tax benefit entirely.</p>
+
+      <h2>How NSOs Are Taxed — Step by Step</h2>
+      <p>NSOs are straightforward. No parallel tax systems. No two-year holding periods. Just simple ordinary income taxation.</p>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Grant</h3>
+      <p>Nothing. Just like ISOs.</p>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Exercise</h3>
+      <p>The spread (FMV minus strike) is immediately taxed as ordinary income. Your company withholds taxes on your behalf — this amount shows up on your W-2. You owe federal, state, and payroll taxes on the spread right away.</p>
+
+      <p><strong>Example:</strong> You exercise NSOs with a $1 strike at $12 FMV. The spread is $11 per share. On 10,000 options, that's $110,000 in ordinary income. Your company withholds $35,000–$40,000 (depending on your tax bracket). You need cash to cover this withholding.</p>
+
+      <div class="emphasis-box">
+        <strong>Cash drain alert:</strong> With NSOs, you must have enough cash to cover the tax withholding, or your company must allow you to sell-to-cover (using the proceeds from selling shares to pay taxes).
+      </div>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">At Sale</h3>
+      <p>Any gain above the FMV at exercise is capital gains (short-term if held less than 1 year; long-term if held 1 year or more). This is straightforward — no AMT, no complications.</p>
+
+      <p><strong>Example:</strong> You exercised at $12 FMV. You sell at $20. The $8 difference ($20 - $12) is capital gains. If you held for more than 1 year, it's long-term capital gains.</p>
+
+      <h2>When ISOs Win (and When They Don't)</h2>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">ISOs Win When:</h3>
+      <ul>
+        <li><strong>You can hold for the qualifying period</strong> (1 year post-exercise, 2 years post-grant). Long-term capital gains rates beat ordinary income rates by a mile.</li>
+        <li><strong>The spread at exercise is small.</strong> If you early-exercise (before your company raises funding), the spread might only be a few thousand dollars. AMT is manageable.</li>
+        <li><strong>You can manage AMT.</strong> If you have AMT credits from previous years, or you have other income losses to offset, ISOs become attractive.</li>
+        <li><strong>You're in a high income tax bracket.</strong> The difference between 37% (ordinary income) and 20% (long-term capital gains) is worth tens of thousands of dollars.</li>
+      </ul>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">ISOs Lose When:</h3>
+      <ul>
+        <li><strong>You exercise a large spread.</strong> If the strike is $1 and the FMV is $50, that $49 spread on 50,000 options is $2.45 million in AMT income. You could owe $500,000+ in taxes before you sell a share.</li>
+        <li><strong>You leave the company.</strong> ISOs have a 90-day exercise window post-termination. If you can't exercise in time or the stock isn't worth exercising, you lose the options entirely. NSOs typically have 10-year windows.</li>
+        <li><strong>The company fails after you exercise.</strong> You paid AMT on phantom gains. If the stock goes to zero, you can't recover the AMT you paid. NSOs would have cost you nothing if you never sold.</li>
+        <li><strong>You're forced into an early sale.</strong> If you need cash and sell before the 1-year / 2-year requirement, you lose ISO status. NSOs would have already been taxed at grant.</li>
+      </ul>
+
+      <div class="emphasis-box">
+        <strong>The AMT Trap Scenario:</strong> You exercise 10,000 ISOs with a $1 strike and $10 FMV. That's $90,000 in AMT income. You might owe $20,000–$30,000 in AMT — and if the stock drops to $2 before you can sell, you paid tax on gains you never realized. Meanwhile, NSOs would have been taxed upfront on the $9 spread, but you'd get no surprise AMT bill.
+      </div>
+
+      <h2>A Real-World Comparison</h2>
+      <p>Let's put actual numbers to this. Here's the same scenario with both ISO and NSO treatment:</p>
+
+      <p><strong>The Setup:</strong></p>
+      <ul>
+        <li>10,000 options granted</li>
+        <li>Strike price: $2</li>
+        <li>Exercise at: $12 FMV</li>
+        <li>Sell at: $20</li>
+        <li>Assume 35% tax bracket (federal + state + payroll), 20% LTCG rate, no AMT concerns</li>
+      </ul>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">ISO Scenario (Qualifying Disposition):</h3>
+      <div class="calculation-box">
+        <div class="calculation-line">
+          <span class="calculation-label">Shares × (Sale Price - Strike)</span>
+          <span class="calculation-value">10,000 × ($20 - $2) = $180,000</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">Total gain taxed at LTCG (20%)</span>
+          <span class="calculation-value">$180,000 × 20% = $36,000</span>
+        </div>
+        <div class="calculation-line calculation-total">
+          <span class="calculation-label"><strong>Total Tax Owed:</strong></span>
+          <span class="calculation-value"><strong>$36,000</strong></span>
+        </div>
+        <p style="margin-top: 1rem; font-size: 0.9rem; color: #5A5A6E;">(Note: This ignores AMT for simplicity. In reality, you'd owe AMT on the $100K spread at exercise, which might add $15K–$25K. AMT credits could offset future taxes.)</p>
+      </div>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">NSO Scenario:</h3>
+      <div class="calculation-box">
+        <div class="calculation-line">
+          <span class="calculation-label">At Exercise: Spread × Number of Options</span>
+          <span class="calculation-value">($12 - $2) × 10,000 = $100,000</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">Tax on spread (ordinary income, 35%)</span>
+          <span class="calculation-value">$100,000 × 35% = $35,000</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">At Sale: Gain above FMV</span>
+          <span class="calculation-value">($20 - $12) × 10,000 = $80,000</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">Tax on this gain (LTCG, 20%)</span>
+          <span class="calculation-value">$80,000 × 20% = $16,000</span>
+        </div>
+        <div class="calculation-line calculation-total">
+          <span class="calculation-label"><strong>Total Tax Owed:</strong></span>
+          <span class="calculation-value"><strong>$51,000</strong></span>
+        </div>
+      </div>
+
+      <p style="margin-top: 2rem; padding: 1.5rem; background-color: #E8F5F0; border-radius: 4px;"><strong>The Difference:</strong> $51,000 (NSO) - $36,000 (ISO) = <strong>$15,000 in your pocket</strong> with an ISO. That's a year of car payments. That's a nice vacation. That's why people care about this.</p>
+
+      <p style="margin-top: 1.5rem; font-size: 0.95rem; color: #5A5A6E;"><em>Of course, if your company fails, or you leave before the 2-year mark and can't hold, or AMT doubles your bill, the math changes completely. The ISO advantage evaporates.</em></p>
+
+      <h2>What to Actually Do</h2>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">If You Have ISOs:</h3>
+      <ul>
+        <li><strong>Model your AMT impact before exercising.</strong> Use a spreadsheet or talk to a CPA. Calculate what your AMT bill could be. If it's $50,000 and you don't have it, think hard.</li>
+        <li><strong>Consider early exercise if the company is pre-seed or seed stage.</strong> The spread is smaller, AMT is manageable, and the 83(b) election can lock in low FMV for future gains.</li>
+        <li><strong>Plan your holding period.</strong> If you're likely to leave, leaving ISOs behind is expensive. Exercise early if possible so you can hold for 1 year post-exercise while still at the company.</li>
+        <li><strong>Watch the 90-day window.</strong> If you leave, set a calendar reminder to exercise (or let them expire). You can't extend this window.</li>
+      </ul>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">If You Have NSOs:</h3>
+      <ul>
+        <li><strong>Plan for tax withholding at exercise.</strong> You'll need cash. Talk to your company about sell-to-cover if you don't have it.</li>
+        <li><strong>Consider timing your exercise across tax years if you have multi-year vesting.</strong> If you're on the edge of a tax bracket, spreading exercise events over years can help.</li>
+        <li><strong>Don't stress about hold periods for tax purposes.</strong> Your tax hit happens at exercise, not at sale. Hold as long or short as the opportunity warrants.</li>
+      </ul>
+
+      <h3 style="font-size: 1.3rem; margin-top: 1.5rem; margin-bottom: 1rem; font-family: 'Inter', sans-serif; font-weight: 600;">If You Have Both:</h3>
+      <ul>
+        <li><strong>Talk to a CPA who specializes in equity compensation.</strong> The strategy depends on your salary, bonus, other income, and the specific numbers. A good CPA might save you more than they cost.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Q: Can I choose between ISOs and NSOs?</h3>
+        <p>No. Your company decides when granting the options. Your option agreement will specify which type you received. You cannot convert between them (though NSOs can convert to ISOs in rare cases through specific regulations).</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: What happens to my ISOs when I leave the company?</h3>
+        <p>You have 90 days to exercise from your termination date. After that, any unexercised ISOs are forfeited. If you exercise within the 90-day window, those shares become NSOs for tax purposes (they convert to NSO treatment, but not formally). This is called a "disqualifying disposition" if you sell them before meeting the 2-year from-grant requirement.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Should I early exercise my ISOs?</h3>
+        <p>Maybe. Early exercise (exercising before vesting) can be powerful if your company is early stage. You lock in a low strike and can file an 83(b) election to start your 1-year holding period immediately. The downside: you're writing a check upfront for shares you don't yet own (if you leave, you might forfeit shares you paid for). Talk to a CPA about your specific situation.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: Do ISOs count toward my W-2 income?</h3>
+        <p>Not at exercise. If you do a qualifying disposition (meet the 1-year and 2-year requirements), the spread never appears on your W-2 — you just pay capital gains tax. If you do a disqualifying disposition (sell early), the spread becomes ordinary income and should be reported on your W-2 (or Form 8949 if not).</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Q: What if the stock price drops after I exercise ISOs?</h3>
+        <p>You might owe AMT on phantom gains. If you exercised at $10 FMV and the stock drops to $2, you still owe AMT on the $9 spread — even though the stock is worth less. However, you can claim an AMT credit in future years if your regular tax liability rises above your AMT. This is painful but recoverable. NSOs would have cost you nothing in this scenario (you'd owe zero taxes if you never sell).</p>
+      </div>
+    </article>
+
+    <!-- CTA Box -->
+    <div class="cta-box">
+      <h3>Not sure which type you have?</h3>
+      <p>Check your option agreement — it'll say "Incentive Stock Option" or "Nonqualified Stock Option" right at the top. Then come back and plan your next move.</p>
+      <a href="https://www.withclearpath.com/blog/" class="cta-button">Browse All Guides →</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>ClearPath</h4>
+        <a href="https://www.withclearpath.com/about">About</a>
+        <a href="https://www.withclearpath.com/contact">Contact</a>
+        <a href="https://www.withclearpath.com/privacy">Privacy</a>
+      </div>
+      <div class="footer-section">
+        <h4>Resources</h4>
+        <a href="https://www.withclearpath.com/guides">Guides</a>
+        <a href="https://www.withclearpath.com/blog">Blog</a>
+        <a href="https://www.withclearpath.com/tools">Tools</a>
+      </div>
+      <div class="footer-section">
+        <h4>Learning</h4>
+        <a href="https://www.withclearpath.com/equity-basics">Equity Basics</a>
+        <a href="https://www.withclearpath.com/tax-guide">Tax Guide</a>
+        <a href="https://www.withclearpath.com/faq">FAQ</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 ClearPath. All rights reserved. This content is for educational purposes only and is not tax or legal advice. Consult a professional before making decisions.</p>
+    </div>
+  </footer>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "ISO vs NSO: Complete Tax Comparison for Startup Employees",
+    "description": "Learn the fundamental tax differences between ISOs and NSOs, including how each is taxed, real-world examples, and actionable strategies for startup employees.",
+    "image": "https://www.withclearpath.com/images/iso-nso-comparison.png",
+    "datePublished": "2026-03-19",
+    "author": {
+      "@type": "Organization",
+      "name": "ClearPath"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClearPath",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.withclearpath.com/logo.png"
+      }
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Can I choose between ISOs and NSOs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. Your company decides when granting the options. Your option agreement will specify which type you received. You cannot convert between them."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my ISOs when I leave the company?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You have 90 days to exercise from your termination date. After that, any unexercised ISOs are forfeited. If you exercise within the 90-day window, those shares become NSOs for tax purposes."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Should I early exercise my ISOs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Maybe. Early exercise can be powerful if your company is early stage. You lock in a low strike and can file an 83(b) election to start your 1-year holding period immediately. The downside: you're writing a check upfront for shares you don't yet own."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do ISOs count toward my W-2 income?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not at exercise. If you do a qualifying disposition, the spread never appears on your W-2 — you just pay capital gains tax. If you do a disqualifying disposition, the spread becomes ordinary income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What if the stock price drops after I exercise ISOs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You might owe AMT on phantom gains. However, you can claim an AMT credit in future years if your regular tax liability rises above your AMT. This is painful but recoverable."
+        }
+      }
+    ]
+  }
+  </script>
+</body>
+</html>

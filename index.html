@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ClearPath: Free education on stock options, RSUs, and equity compensation. Written by people who've navigated it themselves.">
+  <meta name="keywords" content="stock options, RSUs, equity compensation, ISO, NSO, 83b election, AMT, startup equity">
+  <meta name="theme-color" content="#0D7C66">
+
+  <!-- Open Graph / Social -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://withclearpath.com/">
+  <meta property="og:title" content="ClearPath — Stock Options, RSUs & Equity Compensation Guides">
+  <meta property="og:description" content="Free, honest education on equity compensation. Navigate your stock options, RSUs, and tax decisions with confidence.">
+  <meta property="og:site_name" content="ClearPath">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:url" content="https://withclearpath.com/">
+  <meta name="twitter:title" content="ClearPath — Stock Options, RSUs & Equity Compensation Guides">
+  <meta name="twitter:description" content="Free, honest education on equity compensation. Navigate your stock options, RSUs, and tax decisions with confidence.">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://withclearpath.com/">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <title>ClearPath — Stock Options, RSUs & Equity Compensation Guides</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --color-bg: #FAFAF8;
+      --color-text: #1A1A2E;
+      --color-accent-teal: #0D7C66;
+      --color-accent-coral: #E8734A;
+      --color-card: #FFFFFF;
+      --color-border: #E8E6E3;
+      --color-text-secondary: #6B6B7A;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+    }
+
+    /* Utility */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    a {
+      color: var(--color-accent-teal);
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: var(--color-accent-coral);
+    }
+
+    button {
+      font-family: 'Inter', sans-serif;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    /* ===== HEADER / NAV ===== */
+    header {
+      background-color: var(--color-bg);
+      border-bottom: 1px solid var(--color-border);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1.5rem 0;
+    }
+
+    .logo {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--color-accent-teal);
+      letter-spacing: -0.5px;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text);
+    }
+
+    .nav-links a:hover {
+      color: var(--color-accent-teal);
+    }
+
+    @media (max-width: 640px) {
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.85rem;
+      }
+
+      .logo {
+        font-size: 1.25rem;
+      }
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      padding: 5rem 0;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 3.5rem;
+      font-weight: 700;
+      line-height: 1.2;
+      margin-bottom: 1.5rem;
+      max-width: 900px;
+      letter-spacing: -1px;
+    }
+
+    .hero .subtitle {
+      font-size: 1.15rem;
+      color: var(--color-text-secondary);
+      max-width: 700px;
+      margin-bottom: 2.5rem;
+      line-height: 1.7;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: var(--color-accent-coral);
+      color: white;
+      padding: 0.875rem 2rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 8px rgba(232, 115, 74, 0.15);
+    }
+
+    .cta-button:hover {
+      background-color: #d65c31;
+      box-shadow: 0 4px 12px rgba(232, 115, 74, 0.25);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 768px) {
+      .hero {
+        padding: 3.5rem 0;
+      }
+
+      .hero h1 {
+        font-size: 2.25rem;
+      }
+
+      .hero .subtitle {
+        font-size: 1rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 1.75rem;
+      }
+
+      .hero .subtitle {
+        font-size: 0.95rem;
+      }
+    }
+
+    /* ===== TOPIC CARDS SECTION ===== */
+    .topics-section {
+      padding: 5rem 0;
+      background-color: var(--color-bg);
+    }
+
+    .section-heading {
+      font-family: 'Source Serif 4', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 3rem;
+      letter-spacing: -0.5px;
+    }
+
+    .topics-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+    }
+
+    .topic-card {
+      background-color: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 2rem;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .topic-card:hover {
+      border-color: var(--color-accent-teal);
+      box-shadow: 0 4px 12px rgba(13, 124, 102, 0.1);
+      transform: translateY(-4px);
+    }
+
+    .topic-icon {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .topic-card h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+
+    .topic-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .topics-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .section-heading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+      }
+    }
+
+    /* ===== WHY CLEARPATH SECTION ===== */
+    .why-section {
+      padding: 5rem 0;
+      background-color: var(--color-bg);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 3rem;
+      margin-top: 3rem;
+    }
+
+    .why-card {
+      padding: 2rem;
+    }
+
+    .why-card h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: var(--color-accent-teal);
+    }
+
+    .why-card p {
+      font-size: 0.95rem;
+      color: var(--color-text-secondary);
+      line-height: 1.7;
+    }
+
+    @media (max-width: 768px) {
+      .why-grid {
+        gap: 2rem;
+      }
+
+      .why-card {
+        padding: 1.5rem;
+      }
+    }
+
+    /* ===== LATEST ARTICLES SECTION ===== */
+    .articles-section {
+      padding: 5rem 0;
+      background-color: var(--color-bg);
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .article-card {
+      background-color: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card:hover {
+      border-color: var(--color-accent-teal);
+      box-shadow: 0 4px 12px rgba(13, 124, 102, 0.1);
+    }
+
+    .article-card-header {
+      background: linear-gradient(135deg, var(--color-accent-teal), var(--color-accent-coral));
+      height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 2.5rem;
+    }
+
+    .article-card-content {
+      padding: 1.5rem;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .article-card h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      margin-bottom: 0.5rem;
+      color: var(--color-text);
+    }
+
+    .article-card p {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 1rem;
+      flex: 1;
+    }
+
+    .article-card-link {
+      font-size: 0.9rem;
+      font-weight: 600;
+      color: var(--color-accent-teal);
+      display: inline-block;
+    }
+
+    .article-card-link:hover {
+      color: var(--color-accent-coral);
+    }
+
+    @media (max-width: 768px) {
+      .articles-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* ===== EMAIL CAPTURE SECTION ===== */
+    .email-section {
+      padding: 4rem 0;
+      background-color: var(--color-bg);
+      text-align: center;
+    }
+
+    .email-card {
+      background-color: var(--color-card);
+      border: 1px solid var(--color-border);
+      border-radius: 8px;
+      padding: 3rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .email-card h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: var(--color-text);
+    }
+
+    .email-card p {
+      font-size: 1rem;
+      color: var(--color-text-secondary);
+      margin-bottom: 2rem;
+      line-height: 1.6;
+    }
+
+    .email-form {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .email-form input {
+      flex: 1;
+      min-width: 220px;
+      padding: 0.875rem 1rem;
+      border: 1px solid var(--color-border);
+      border-radius: 6px;
+      font-family: 'Inter', sans-serif;
+      font-size: 1rem;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      transition: border-color 0.3s ease;
+    }
+
+    .email-form input:focus {
+      outline: none;
+      border-color: var(--color-accent-teal);
+    }
+
+    .email-form input::placeholder {
+      color: var(--color-text-secondary);
+    }
+
+    .email-form button {
+      background-color: var(--color-accent-coral);
+      color: white;
+      padding: 0.875rem 1.75rem;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 600;
+      min-width: 120px;
+      box-shadow: 0 2px 8px rgba(232, 115, 74, 0.15);
+    }
+
+    .email-form button:hover {
+      background-color: #d65c31;
+      box-shadow: 0 4px 12px rgba(232, 115, 74, 0.25);
+      transform: translateY(-2px);
+    }
+
+    @media (max-width: 640px) {
+      .email-card {
+        padding: 2rem;
+      }
+
+      .email-card h2 {
+        font-size: 1.5rem;
+      }
+
+      .email-form {
+        flex-direction: column;
+      }
+
+      .email-form input,
+      .email-form button {
+        min-width: auto;
+        width: 100%;
+      }
+    }
+
+    /* ===== FOOTER ===== */
+    footer {
+      background-color: var(--color-bg);
+      border-top: 1px solid var(--color-border);
+      padding: 3rem 0;
+      margin-top: 5rem;
+    }
+
+    .footer-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 2rem;
+    }
+
+    .footer-left p {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+    }
+
+    .footer-left .tagline {
+      font-size: 0.85rem;
+      color: var(--color-text-secondary);
+      font-style: italic;
+      margin-top: 0.5rem;
+    }
+
+    .footer-right {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .footer-right a {
+      font-size: 0.9rem;
+      color: var(--color-text-secondary);
+      font-weight: 500;
+    }
+
+    .footer-right a:hover {
+      color: var(--color-accent-teal);
+    }
+
+    @media (max-width: 640px) {
+      .footer-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 1.5rem;
+      }
+
+      .footer-right {
+        justify-content: center;
+        gap: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Header / Nav -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="logo">ClearPath</div>
+        <ul class="nav-links">
+          <li><a href="/blog/">Guides</a></li>
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="#tools">Tools</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="container">
+        <h1>Your equity is worth more than you think. So are the mistakes.</h1>
+        <p class="subtitle">ClearPath is the free resource for understanding stock options, RSUs, and equity compensation — written by people who've been through it.</p>
+        <a href="/blog/" class="cta-button">Start Learning →</a>
+      </div>
+    </section>
+
+    <!-- Topic Cards Section -->
+    <section class="topics-section">
+      <div class="container">
+        <h2 class="section-heading">What do you need help with?</h2>
+        <div class="topics-grid">
+          <a href="/blog/" class="topic-card">
+            <div class="topic-icon">📊</div>
+            <h3>Stock Options (ISOs & NSOs)</h3>
+            <p>Understand the basics of incentive and non-qualified stock options.</p>
+          </a>
+          <a href="/blog/" class="topic-card">
+            <div class="topic-icon">📈</div>
+            <h3>RSUs & RSU Taxes</h3>
+            <p>What happens when RSUs vest, and why taxes matter on day one.</p>
+          </a>
+          <a href="/blog/" class="topic-card">
+            <div class="topic-icon">✍️</div>
+            <h3>83(b) Elections</h3>
+            <p>Why you might file this form, and what it actually does.</p>
+          </a>
+          <a href="/blog/" class="topic-card">
+            <div class="topic-icon">💰</div>
+            <h3>AMT & Tax Planning</h3>
+            <p>Navigate the Alternative Minimum Tax and exercise strategies.</p>
+          </a>
+          <a href="/blog/" class="topic-card">
+            <div class="topic-icon">🚪</div>
+            <h3>Leaving Your Company</h3>
+            <p>What happens to your equity when you depart.</p>
+          </a>
+          <a href="/blog/" class="topic-card">
+            <div class="topic-icon">🤝</div>
+            <h3>Startup Equity Negotiation</h3>
+            <p>How to think about equity offers and what to ask for.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Why ClearPath Section -->
+    <section class="why-section">
+      <div class="container">
+        <h2 class="section-heading">Why ClearPath?</h2>
+        <div class="why-grid">
+          <div class="why-card">
+            <h3>Written from experience</h3>
+            <p>We've exercised options, paid the AMT, and learned the hard way. Every guide is grounded in real decisions.</p>
+          </div>
+          <div class="why-card">
+            <h3>No sales pitch</h3>
+            <p>We're not selling you a product. We're giving you the knowledge your company's equity education should have.</p>
+          </div>
+          <div class="why-card">
+            <h3>Always free</h3>
+            <p>Every guide, calculator, and framework on ClearPath is free. Good equity decisions shouldn't be behind a paywall.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest Articles Section -->
+    <section class="articles-section">
+      <div class="container">
+        <h2 class="section-heading">Latest Guides</h2>
+        <div class="articles-grid">
+          <!-- ARTICLE CARDS WILL BE POPULATED -->
+          <div class="article-card">
+            <div class="article-card-header">📚</div>
+            <div class="article-card-content">
+              <h3>Article coming soon</h3>
+              <p>Check back for in-depth guides on equity compensation topics.</p>
+              <a href="/blog/" class="article-card-link">View all guides →</a>
+            </div>
+          </div>
+          <div class="article-card">
+            <div class="article-card-header">📚</div>
+            <div class="article-card-content">
+              <h3>Article coming soon</h3>
+              <p>Check back for in-depth guides on equity compensation topics.</p>
+              <a href="/blog/" class="article-card-link">View all guides →</a>
+            </div>
+          </div>
+          <div class="article-card">
+            <div class="article-card-header">📚</div>
+            <div class="article-card-content">
+              <h3>Article coming soon</h3>
+              <p>Check back for in-depth guides on equity compensation topics.</p>
+              <a href="/blog/" class="article-card-link">View all guides →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Email Capture Section -->
+    <section class="email-section">
+      <div class="container">
+        <div class="email-card">
+          <h2>Get the Equity Playbook</h2>
+          <p>A free weekly email with one actionable equity comp insight. No spam, no sales calls.</p>
+          <form class="email-form" action="#" method="POST">
+            <input type="email" name="email" placeholder="you@example.com" required>
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-left">
+          <p>© 2026 ClearPath. All rights reserved.</p>
+          <p class="tagline">Built for people navigating equity compensation.</p>
+        </div>
+        <ul class="footer-right">
+          <li><a href="/blog/">Blog</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+          <li><a href="/terms">Terms</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Organization Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "ClearPath",
+    "url": "https://withclearpath.com",
+    "logo": "https://withclearpath.com/logo.png",
+    "description": "Free education on stock options, RSUs, and equity compensation. Written by people who've navigated it themselves.",
+    "sameAs": [
+      "https://twitter.com/clearpath"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "url": "https://withclearpath.com"
+    }
+  }
+  </script>
+</body>
+</html>

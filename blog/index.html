@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Clear, practical guides on stock options, RSUs, equity compensation, and the tax decisions that come with them.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://withclearpath.com/blog/">
+
+  <title>Blog & Guides – ClearPath</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAF8;
+      color: #1A1A2E;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #FFFFFF;
+      padding: 1.5rem 2rem;
+      border-bottom: 1px solid #E8E6E3;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-family: 'Source Serif 4', serif;
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #0D7C66;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1A1A2E;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: #0D7C66;
+    }
+
+    .nav-links a[aria-current="page"] {
+      color: #0D7C66;
+      font-weight: 600;
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+      text-align: center;
+      border-bottom: 2px solid #0D7C66;
+    }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .hero p {
+      font-size: 1.1rem;
+      color: #5A5A5A;
+      max-width: 700px;
+      margin: 0 auto;
+      line-height: 1.7;
+    }
+
+    /* Blog Grid Section */
+    .blog-section {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    /* Article Card */
+    .article-card {
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+      border-radius: 8px;
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .article-card:hover {
+      transform: translateY(-4px);
+      border-color: #0D7C66;
+      box-shadow: 0 4px 12px rgba(13, 124, 102, 0.08);
+    }
+
+    .article-title {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+      color: #1A1A2E;
+      line-height: 1.4;
+    }
+
+    .article-excerpt {
+      color: #5A5A5A;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      margin-bottom: 1.25rem;
+      flex-grow: 1;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .article-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: #8A8A8A;
+      margin-bottom: 1rem;
+      padding-bottom: 1rem;
+      border-bottom: 1px solid #E8E6E3;
+    }
+
+    .article-date {
+      font-weight: 500;
+    }
+
+    .article-read-time {
+      font-style: italic;
+    }
+
+    .article-cta {
+      display: inline-flex;
+      align-items: center;
+      color: #0D7C66;
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.95rem;
+      transition: gap 0.2s ease;
+      gap: 0.5rem;
+    }
+
+    .article-cta:hover {
+      gap: 0.75rem;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #FFFFFF;
+      border-top: 1px solid #E8E6E3;
+      padding: 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #8A8A8A;
+    }
+
+    .footer-links {
+      margin-bottom: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .footer-links a {
+      color: #0D7C66;
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    .footer-links a:hover {
+      color: #E8734A;
+    }
+
+    .footer-copyright {
+      color: #8A8A8A;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero p {
+        font-size: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .article-meta {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      nav {
+        padding: 1rem;
+      }
+
+      .nav-links {
+        gap: 0.75rem;
+        font-size: 0.85rem;
+      }
+
+      .hero {
+        padding: 2rem 1rem;
+      }
+
+      .hero h1 {
+        font-size: 1.5rem;
+      }
+
+      .blog-section {
+        padding: 2rem 1rem;
+      }
+
+      .article-card {
+        padding: 1.5rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="https://withclearpath.com" class="logo">ClearPath</a>
+      <ul class="nav-links">
+        <li><a href="https://withclearpath.com/guides">Guides</a></li>
+        <li><a href="https://withclearpath.com/blog/" aria-current="page">Blog</a></li>
+        <li><a href="https://withclearpath.com/tools">Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Guides & Articles</h1>
+    <p>Clear, practical guides on stock options, RSUs, equity compensation, and the tax decisions that come with them.</p>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="blog-section">
+    <div class="blog-grid">
+      <!-- Article 1 -->
+      <a href="what-happens-to-stock-options-when-you-leave.html" class="article-card">
+        <h2 class="article-title">What Happens to Your Stock Options When You Leave a Company?</h2>
+        <p class="article-excerpt">Your exercise window, tax implications, and the critical deadlines you need to know before your last day.</p>
+        <div class="article-meta">
+          <span class="article-date">March 19, 2026</span>
+          <span class="article-read-time">8 min read</span>
+        </div>
+        <div class="article-cta">
+          <span>Read Guide</span>
+          <span>→</span>
+        </div>
+      </a>
+
+      <!-- Article 2 -->
+      <a href="iso-vs-nso-complete-tax-comparison.html" class="article-card">
+        <h2 class="article-title">ISO vs NSO: Complete Tax Comparison for Startup Employees</h2>
+        <p class="article-excerpt">The tax treatment is completely different — and choosing wrong can cost you tens of thousands. Here's how each works.</p>
+        <div class="article-meta">
+          <span class="article-date">March 19, 2026</span>
+          <span class="article-read-time">10 min read</span>
+        </div>
+        <div class="article-cta">
+          <span>Read Guide</span>
+          <span>→</span>
+        </div>
+      </a>
+
+      <!-- Article 3 -->
+      <a href="how-rsu-taxes-work.html" class="article-card">
+        <h2 class="article-title">How RSU Taxes Work: Federal, State, and FICA Breakdown</h2>
+        <p class="article-excerpt">Your RSU vesting is a taxable event. Here's exactly how much you'll owe and what your company withholds.</p>
+        <div class="article-meta">
+          <span class="article-date">March 19, 2026</span>
+          <span class="article-read-time">7 min read</span>
+        </div>
+        <div class="article-cta">
+          <span>Read Guide</span>
+          <span>→</span>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="https://withclearpath.com">Home</a>
+        <a href="https://withclearpath.com/guides">Guides</a>
+        <a href="https://withclearpath.com/blog/">Blog</a>
+        <a href="https://withclearpath.com/tools">Tools</a>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2026 ClearPath. All rights reserved.
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

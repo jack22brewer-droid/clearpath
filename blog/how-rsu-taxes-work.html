@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Understand how RSU taxes work: federal income tax, Social Security, Medicare, state taxes, and sell-to-cover mechanics. Learn what withholding traps to avoid.">
+    <meta name="keywords" content="RSU taxes, restricted stock units, equity compensation, capital gains, tax withholding">
+    <meta property="og:title" content="How RSU Taxes Work: Federal, State, and FICA Breakdown">
+    <meta property="og:description" content="Complete guide to RSU taxation: federal, state, and FICA taxes explained with practical examples and common mistakes to avoid.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://withclearpath.com/blog/how-rsu-taxes-work">
+    <meta property="article:published_time" content="2026-03-19">
+    <link rel="canonical" href="https://withclearpath.com/blog/how-rsu-taxes-work">
+    <title>How RSU Taxes Work: Federal, State, and FICA Breakdown | ClearPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAF8;
+            color: #1A1A2E;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E8E6E3;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .nav-brand {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0D7C66;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1A1A2E;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0D7C66;
+        }
+
+        /* Main content wrapper */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Hero section */
+        .article-hero {
+            margin-bottom: 3rem;
+        }
+
+        .article-hero h1 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+            color: #1A1A2E;
+        }
+
+        .article-meta {
+            color: #5A5A6E;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .article-hero::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: #0D7C66;
+            margin-top: 1.5rem;
+        }
+
+        /* Answer box */
+        .answer-box {
+            background-color: #E8F5F0;
+            border-left: 5px solid #0D7C66;
+            padding: 1.5rem;
+            margin-bottom: 3rem;
+            border-radius: 4px;
+        }
+
+        .answer-box p {
+            color: #1A1A2E;
+            line-height: 1.8;
+            font-size: 0.95rem;
+        }
+
+        /* Article body */
+        .article-body h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            color: #1A1A2E;
+        }
+
+        .article-body h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-body p {
+            margin-bottom: 1rem;
+            color: #1A1A2E;
+            line-height: 1.8;
+        }
+
+        .article-body strong {
+            font-weight: 600;
+            color: #1A1A2E;
+        }
+
+        .highlight {
+            background-color: #FFF9E6;
+            padding: 0.2em 0.4em;
+            border-radius: 2px;
+        }
+
+        /* Table styles */
+        .tax-breakdown-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: #FFFFFF;
+            border: 1px solid #E8E6E3;
+            border-radius: 4px;
+            overflow: hidden;
+        }
+
+        .tax-breakdown-table thead {
+            background-color: #E8F5F0;
+        }
+
+        .tax-breakdown-table th {
+            padding: 1rem;
+            text-align: left;
+            font-weight: 600;
+            color: #0D7C66;
+            border-bottom: 2px solid #0D7C66;
+        }
+
+        .tax-breakdown-table td {
+            padding: 1rem;
+            border-bottom: 1px solid #E8E6E3;
+        }
+
+        .tax-breakdown-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Example box */
+        .example-box {
+            background-color: #FFFFFF;
+            border: 1px solid #E8E6E3;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 4px;
+            border-left: 4px solid #E8734A;
+        }
+
+        .example-box strong {
+            color: #E8734A;
+        }
+
+        /* List styles */
+        .article-body ul,
+        .article-body ol {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body li {
+            margin-bottom: 0.75rem;
+            line-height: 1.8;
+        }
+
+        /* FAQ section */
+        .faq-section {
+            margin-top: 3rem;
+        }
+
+        .faq-item {
+            margin-bottom: 1.5rem;
+            background-color: #FFFFFF;
+            padding: 1.5rem;
+            border-radius: 4px;
+            border: 1px solid #E8E6E3;
+        }
+
+        .faq-item strong {
+            color: #0D7C66;
+            display: block;
+            margin-bottom: 0.75rem;
+            font-size: 0.95rem;
+        }
+
+        .faq-item p {
+            color: #5A5A6E;
+            font-size: 0.95rem;
+        }
+
+        /* CTA box */
+        .cta-box {
+            background-color: #E8F5F0;
+            border: 1px solid #0D7C66;
+            padding: 2rem;
+            margin: 3rem 0;
+            border-radius: 4px;
+            text-align: center;
+        }
+
+        .cta-box h3 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 0.75rem;
+            color: #1A1A2E;
+        }
+
+        .cta-box p {
+            color: #5A5A6E;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #E8734A;
+            color: #FFFFFF;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #D65A2A;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1A1A2E;
+            color: #FFFFFF;
+            padding: 2rem;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 4rem;
+        }
+
+        footer p {
+            margin-bottom: 0.5rem;
+        }
+
+        footer a {
+            color: #0D7C66;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+            }
+
+            .article-hero h1 {
+                font-size: 1.75rem;
+            }
+
+            .article-body h2 {
+                font-size: 1.4rem;
+            }
+
+            main {
+                padding: 1.5rem 1rem;
+            }
+
+            .tax-breakdown-table {
+                font-size: 0.85rem;
+            }
+
+            .tax-breakdown-table th,
+            .tax-breakdown-table td {
+                padding: 0.75rem 0.5rem;
+            }
+
+            .cta-box {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="nav-brand">ClearPath</a>
+        <ul class="nav-links">
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tools">Tools</a></li>
+        </ul>
+    </nav>
+
+    <!-- Main content -->
+    <main>
+        <!-- Article hero -->
+        <section class="article-hero">
+            <h1>How RSU Taxes Work: Federal, State, and FICA Breakdown</h1>
+            <div class="article-meta">March 19, 2026 · 7 min read</div>
+        </section>
+
+        <!-- Answer box -->
+        <aside class="answer-box">
+            <p><strong>The bottom line:</strong> When RSUs vest, they're taxed as ordinary income at the full fair market value on the vesting date. Your employer withholds federal income tax (typically 22%, or 37% on amounts over $1 million), Social Security (6.2% up to the wage base), Medicare (1.45%, plus 0.9% above $200K), and state income tax. Most companies use "sell-to-cover" — automatically selling enough shares to pay the tax bill. If the default 22% federal withholding is less than your actual marginal rate, you'll owe the difference at tax time.</p>
+        </aside>
+
+        <!-- Article body -->
+        <article class="article-body">
+            <h2>RSU Taxes in Plain English</h2>
+            <p>Restricted Stock Units are often presented as a benefit, but the tax consequences are immediate and significant. The key to understanding RSU taxes is this: <strong>the IRS treats RSUs like a cash bonus.</strong></p>
+            <p>When your RSUs vest, the government doesn't care that you received shares instead of a paycheck. From a tax perspective, your employer has paid you cash equal to the fair market value (FMV) of those shares on the vesting date. That value gets added to your W-2 income and is subject to all ordinary income taxes.</p>
+            <p>Here's a concrete example: if 100 shares vest when the stock is trading at $150 per share, the IRS treats it as if your company paid you $15,000 in cash. That $15,000 is ordinary income. Your employer will withhold taxes from it, and come April 15th, you'll report it on your tax return.</p>
+
+            <h2>The Three Tax Events</h2>
+            <p>Understanding when RSUs trigger tax consequences is critical. There are three moments in an RSU's lifecycle:</p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">At Grant</h3>
+            <p>Nothing happens. Receiving an RSU grant carries no tax consequence. Unlike stock options, there's no 83(b) election to file. You simply wait for the vesting date.</p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">At Vesting</h3>
+            <p><strong>This is the taxable event.</strong> The moment RSUs vest, the full fair market value becomes ordinary income. All payroll taxes apply: federal income tax, state income tax, Social Security, and Medicare. Your employer typically withholds these taxes and deposits them on your behalf, and you may receive fewer shares than you vested (through the sell-to-cover mechanism) to cover the tax bill.</p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">At Sale</h3>
+            <p>When you sell the shares, any gain or loss above the FMV at vesting is capital gains (either short-term or long-term, depending on how long you held the shares). If your RSUs vested at $150 and you sell at $180, the $30-per-share gain is a capital gain. If you sell at $120, the $30-per-share loss is a deductible capital loss.</p>
+
+            <h2>What Your Company Withholds (and Why It's Probably Not Enough)</h2>
+            <p>When RSUs vest, your company automatically withholds taxes and files them with the IRS. Here's the breakdown of standard withholding rates:</p>
+
+            <table class="tax-breakdown-table">
+                <thead>
+                    <tr>
+                        <th>Tax Type</th>
+                        <th>Rate</th>
+                        <th>Notes</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>Federal Income Tax</strong></td>
+                        <td>22% (default)</td>
+                        <td>Flat supplemental rate; may be 37% for vesting over $1M in a quarter</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Social Security</strong></td>
+                        <td>6.2%</td>
+                        <td>Only on wages up to $176,100 (2026 wage base)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Medicare</strong></td>
+                        <td>1.45%</td>
+                        <td>No wage cap; applies to all RSU income</td>
+                    </tr>
+                    <tr>
+                        <td><strong>Additional Medicare Tax</strong></td>
+                        <td>0.9%</td>
+                        <td>Applies to wages above $200K individual; $250K married filing jointly</td>
+                    </tr>
+                    <tr>
+                        <td><strong>State Income Tax</strong></td>
+                        <td>0% – 13.3%</td>
+                        <td>Varies by state; CA highest at 13.3%, TX/WA/FL have no income tax</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p>Now here's the catch: <span class="highlight">the 22% federal withholding is almost certainly not enough if you're a well-compensated employee.</span></p>
+
+            <p>The 22% rate is a <strong>supplemental income rate</strong> designed for bonuses and one-off payments. It assumes you're not already in a high tax bracket. But if you're a senior engineer or manager earning $200,000 in base salary and your company grants you $100,000 in RSUs, your combined income is $300,000. Your actual marginal tax rate is 32% or 35% — far higher than the 22% being withheld on the RSUs.</p>
+
+            <div class="example-box">
+                <strong>Real-world example:</strong>
+                <p>500 shares vest at $200 per share = $100,000 in RSU income.</p>
+                <p><strong>Standard 22% federal withholding:</strong> $22,000</p>
+                <p><strong>Your actual marginal rate (35%):</strong> $35,000 owed in federal tax alone</p>
+                <p><strong>Gap:</strong> You're under-withheld by $13,000. You'll owe this at tax time.</p>
+                <p>Add state taxes (say, 9.3% in California = $9,300), Social Security ($6,200), Medicare ($1,450), and Additional Medicare ($900), and you could owe $30,850 total — but your company only withheld $22,000.</p>
+            </div>
+
+            <p>This withholding gap is one of the biggest surprises for RSU recipients. Many people don't realize they need to make estimated tax payments or adjust their W-4 to cover the shortfall.</p>
+
+            <h2>Sell-to-Cover vs. Cash Settlement</h2>
+            <p>Most companies automatically use a "sell-to-cover" approach when RSUs vest. Here's how it works:</p>
+
+            <ol>
+                <li><strong>Shares vest:</strong> You're supposed to receive 500 shares.</li>
+                <li><strong>Withholding calculated:</strong> Your company calculates total taxes owed (federal, state, Social Security, Medicare).</li>
+                <li><strong>Shares sold:</strong> Your company automatically sells just enough of your shares to cover the tax bill.</li>
+                <li><strong>Net shares delivered:</strong> You receive the remaining shares (typically 55–65% of the original grant, depending on your tax bracket and state).</li>
+            </ol>
+
+            <p>For the example above, if 500 shares vest at $200 and your total tax bill is $30,850, your company sells roughly 154 shares (at $200 = $30,800) and delivers 346 shares to you.</p>
+
+            <p>Some companies offer flexibility: they let you choose between full sell-to-cover, net settlement (cash out of pocket to cover taxes), or selling all shares and holding the cash. Read your company's RSU plan carefully — the mechanics vary.</p>
+
+            <h2>The Mistakes That Cost People Thousands</h2>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">Mistake #1: Not Adjusting Estimated Tax Payments</h3>
+            <p>The 22% withholding gap catches most people off guard at tax time. If you know you're in a higher bracket, file Form 1040-ES (Estimated Tax Voucher) with the IRS quarterly, or adjust your W-4 to increase withholding on your salary.</p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">Mistake #2: Holding After Vesting Without a Plan</h3>
+            <p>Here's the hard truth: if 500 shares vest at $200 per share, you owe taxes on $100,000 of income — regardless of whether you sell those shares. If the stock drops to $100 the day after vesting, you still owe the tax. Now you own shares worth $50,000 but owe taxes as if they were worth $100,000. Evaluate RSU shares the same way you'd evaluate any stock purchase: would you buy at today's price with your own cash? If not, sell it.</p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">Mistake #3: Ignoring State Tax Implications</h3>
+            <p>If you moved from California (13.3% state tax) to Texas (no state income tax), you might assume California won't tax your RSUs granted after the move. Wrong. California taxes RSUs based on when they were earned, not when they vested. If your RSUs were granted while you lived in California and you move to Texas before vesting, California may still tax the portion earned while you were in-state. Consult a tax professional if you've moved states.</p>
+
+            <h3 style="font-size: 1.1rem; font-weight: 600; margin-top: 1.5rem; margin-bottom: 0.75rem; color: #1A1A2E;">Mistake #4: Double-Counting on Tax Returns</h3>
+            <p>Your employer should report RSU income on your W-2 and also provide a Form 3921 or Form 3922 (for ESPP) with details on the vesting date and FMV. Make sure your tax software or accountant uses this info correctly. Cost basis for capital gains purposes is the FMV on the vesting date — not the price you "bought" at or the price when you received the shares.</p>
+
+            <h2>What to Do When RSUs Vest</h2>
+            <p>Here's a step-by-step checklist for managing RSU taxation:</p>
+
+            <ol>
+                <li><strong>Check your pay stub and brokerage statement.</strong> How many shares did you receive after sell-to-cover? How much tax was withheld? Record this info — you'll need it for taxes.</li>
+                <li><strong>Calculate if withholding is sufficient.</strong> Compare the 22% federal rate to your actual marginal rate. If you're in the 32% or 35% bracket, estimate your under-withholding.</li>
+                <li><strong>Make an estimated tax payment (if needed).</strong> If you know you're under-withheld, file Form 1040-ES with the IRS or adjust your W-4 to increase withholding on your salary.</li>
+                <li><strong>Decide whether to hold or sell.</strong> Treat the post-vesting shares as if you just bought them with your own money. If you wouldn't buy the stock at today's price, sell it and diversify.</li>
+                <li><strong>Save all documentation.</strong> Keep the vesting date, FMV, shares vested, and taxes withheld. Your brokerage will send tax forms, but they sometimes contain errors. Verify your cost basis.</li>
+            </ol>
+
+            <h2>Frequently Asked Questions</h2>
+
+            <div class="faq-section">
+                <div class="faq-item">
+                    <strong>Q: Do I owe taxes on RSUs even if I can't sell them (lockup period)?</strong>
+                    <p>A: Yes. This is called the "lockup trap." If your RSUs vest but are restricted from sale due to company policy or regulatory lockup, you still owe income tax on the full FMV at vesting — even though you can't actually sell the shares to raise cash for taxes. Some companies offer loans or allow cash payment for taxes in this scenario. If yours doesn't, you may need to pay taxes out of pocket or from other income. Negotiate this with your company if you're facing a lockup.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Q: What's my cost basis for RSUs when I eventually sell?</strong>
+                    <p>A: Your cost basis is the fair market value (FMV) on the vesting date — the day the RSUs vested, not the day you received them or the day you sell. This should be reported by your brokerage on Form 1099-B. Double-check it; brokerages sometimes get this wrong. If you sell for more than the FMV at vesting, the difference is a capital gain. If you sell for less, the difference is a capital loss.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Q: Can I defer RSU taxes to a later year?</strong>
+                    <p>A: Generally no for standard RSUs. Once they vest, ordinary income tax is due. However, some companies offer Deferred Stock Units (DSUs), which can allow you to defer taxation until a later vesting event or termination. DSUs are less common but worth checking with your company's equity team. Additionally, if you hold the vested shares for more than a year after vesting, any appreciation above the vesting date FMV becomes long-term capital gains (taxed at lower rates).</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Q: How are RSUs taxed differently than stock options?</strong>
+                    <p>A: RSUs are taxed at vesting with no out-of-pocket cost upfront. The FMV at vesting becomes ordinary income. Stock options require you to pay the strike price (the exercise price) to acquire shares, and taxation depends on whether they're Incentive Stock Options (ISOs) or Non-Qualified Stock Options (NSOs). ISOs offer preferential tax treatment if held long enough; NSOs are taxed like RSUs at exercise. The key difference: you choose when to exercise options, but RSU vesting is automatic.</p>
+                </div>
+
+                <div class="faq-item">
+                    <strong>Q: What if my company stock price drops after vesting?</strong>
+                    <p>A: The tax damage is already done. You owe ordinary income tax based on the FMV on the vesting date. If the stock drops, you can't get the taxes back or claim the loss against the vesting-date income. However, if you hold the shares and eventually sell at a loss below the vesting-date FMV, that loss is a deductible capital loss. For example: vest at $200, stock drops to $100, you sell at $100 — you have a $100-per-share capital loss.</p>
+                </div>
+            </div>
+
+            <!-- CTA Box -->
+            <section class="cta-box">
+                <h3>Ready to Optimize Your RSU Strategy?</h3>
+                <p>Understanding RSU taxation is the first step. Our guides cover everything from sell-to-cover math to long-term diversification strategies and tax-efficient holding periods.</p>
+                <a href="/blog/" class="cta-button">Browse All Guides →</a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ClearPath. Equity compensation education made clear.</p>
+        <p><a href="/">Home</a> | <a href="/guides">Guides</a> | <a href="/blog">Blog</a> | <a href="/tools">Tools</a></p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #999;">This content is for educational purposes only and is not tax or legal advice. Consult a tax professional for your specific situation.</p>
+    </footer>
+
+    <!-- Schema markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How RSU Taxes Work: Federal, State, and FICA Breakdown",
+        "description": "Comprehensive guide to RSU taxation: federal income tax, Social Security, Medicare, state taxes, and sell-to-cover mechanics explained with practical examples.",
+        "image": "https://withclearpath.com/og-image-rsu-taxes.png",
+        "datePublished": "2026-03-19",
+        "author": {
+            "@type": "Organization",
+            "name": "ClearPath",
+            "url": "https://withclearpath.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ClearPath",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://withclearpath.com/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Do I owe taxes on RSUs even if I can't sell them (lockup period)?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. If your RSUs vest but are restricted from sale due to company policy or regulatory lockup, you still owe income tax on the full FMV at vesting—even though you can't sell the shares to raise cash for taxes."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What's my cost basis for RSUs when I eventually sell?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your cost basis is the fair market value (FMV) on the vesting date. If you sell for more than the FMV at vesting, the difference is a capital gain. If you sell for less, the difference is a capital loss."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I defer RSU taxes to a later year?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Generally no for standard RSUs. Once they vest, ordinary income tax is due. However, some companies offer Deferred Stock Units (DSUs) which can allow deferral."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How are RSUs taxed differently than stock options?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "RSUs are taxed at vesting with no out-of-pocket cost upfront. Stock options require you to pay the strike price and taxation depends on whether they're Incentive Stock Options (ISOs) or Non-Qualified Stock Options (NSOs)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if my company stock price drops after vesting?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The tax damage is already done. You owe ordinary income tax based on the FMV on the vesting date. However, if you hold the shares and eventually sell at a loss below the vesting-date FMV, that loss is a deductible capital loss."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
