@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Should You File an 83(b) Election? The Complete Guide with Tax Calculations – ClearPath</title>
+  <meta name="description" content="An 83(b) election lets you pay taxes on unvested stock at today's low price instead of future value. Learn when to file, exact tax math, and the 30-day deadline.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://withclearpath.com/blog/83b-election-explained.html">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Should You File an 83(b) Election? The Complete Guide with Tax Calculations">
+  <meta property="og:description" content="An 83(b) election lets you pay taxes on unvested stock at today's low price instead of future value. Learn when to file, exact tax math, and the 30-day deadline.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://withclearpath.com/blog/83b-election-explained.html">
+  <meta property="og:site_name" content="ClearPath">
+
+  <!-- JSON-LD: Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Should You File an 83(b) Election? The Complete Guide with Tax Calculations",
+    "description": "An 83(b) election lets you pay taxes on unvested stock at today's low price instead of future value. Learn when to file, exact tax math, and the 30-day deadline.",
+    "datePublished": "2026-03-19",
+    "dateModified": "2026-03-19",
+    "author": {
+      "@type": "Organization",
+      "name": "ClearPath",
+      "url": "https://withclearpath.com"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClearPath",
+      "url": "https://withclearpath.com"
+    },
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://withclearpath.com/blog/83b-election-explained.html"
+    }
+  }
+  </script>
+
+  <!-- JSON-LD: FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an 83(b) election?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An 83(b) election is a letter you file with the IRS within 30 days of receiving restricted stock. It tells the IRS you want to pay income tax on the stock now, at today's fair market value, instead of later when the shares vest. This can save significant money if the stock appreciates, because future gains are taxed as long-term capital gains instead of ordinary income."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the deadline for filing an 83(b) election?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "You must file your 83(b) election with the IRS within 30 calendar days of receiving the restricted stock (your grant date). This deadline is absolute — there are no extensions, no exceptions, and no way to file late. If you miss it by even one day, you lose the option permanently for that grant."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can you file an 83(b) election for RSUs?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No. You cannot file an 83(b) election for RSUs (Restricted Stock Units). The 83(b) election only applies to restricted stock — actual shares you own but that are subject to vesting. RSUs are a promise to deliver shares in the future, not actual shares, so they don't qualify. The 83(b) election is most commonly used with early-exercise stock options or restricted stock grants at startups."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens if I file an 83(b) election and then leave the company before vesting?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you leave before fully vesting, the company buys back your unvested shares (usually at the price you paid). The taxes you paid on those forfeited shares are gone — you don't get a refund. You can claim a capital loss on your tax return for the amount you paid for the forfeited shares, but the income tax you paid via the 83(b) election on those shares is not recoverable."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does an 83(b) election save on taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The savings depend on how much the stock appreciates. For example, if you receive 10,000 shares at $0.10/share and file an 83(b), you pay tax on $1,000 of income. If those shares are worth $5 each when they vest four years later, without an 83(b) you'd owe ordinary income tax on $50,000. With the 83(b), that $49,000 gain is taxed as long-term capital gains (20% max) instead of ordinary income (up to 37%), potentially saving over $8,000 in federal taxes alone."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; background-color: #FAFAF8; color: #1A1A2E; line-height: 1.7; }
+
+    /* Nav */
+    nav { background: #FFFFFF; padding: 1.5rem 2rem; border-bottom: 1px solid #E8E6E3; position: sticky; top: 0; z-index: 100; }
+    .nav-container { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
+    .logo { font-family: 'Source Serif 4', serif; font-weight: 700; font-size: 1.5rem; color: #0D7C66; text-decoration: none; }
+    .nav-links { display: flex; gap: 2rem; list-style: none; }
+    .nav-links a { text-decoration: none; color: #1A1A2E; font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a[aria-current="page"] { color: #0D7C66; }
+
+    /* Article Hero */
+    .article-hero { max-width: 800px; margin: 0 auto; padding: 3rem 2rem 2rem; border-bottom: 3px solid #0D7C66; }
+    .article-hero h1 { font-family: 'Source Serif 4', serif; font-size: 2.4rem; font-weight: 700; line-height: 1.25; margin-bottom: 1rem; }
+    .article-meta { font-size: 0.9rem; color: #5A5A6E; display: flex; gap: 1.5rem; }
+
+    /* Answer Box */
+    .answer-box { max-width: 800px; margin: 2.5rem auto; padding: 1.75rem 2rem; background: #E8F5F0; border-left: 4px solid #0D7C66; border-radius: 0 8px 8px 0; }
+    .answer-box p { font-size: 1.05rem; line-height: 1.7; }
+    .answer-box strong { color: #0D7C66; }
+
+    /* Article Body */
+    .article-body { max-width: 800px; margin: 0 auto; padding: 2rem 2rem 3rem; }
+    .article-body h2 { font-family: 'Source Serif 4', serif; font-size: 1.6rem; font-weight: 700; margin: 2.5rem 0 1rem; color: #1A1A2E; }
+    .article-body h3 { font-size: 1.15rem; font-weight: 600; margin: 2rem 0 0.75rem; color: #1A1A2E; }
+    .article-body p { margin-bottom: 1.25rem; font-size: 1.02rem; }
+    .article-body ul, .article-body ol { margin: 0 0 1.25rem 1.5rem; }
+    .article-body li { margin-bottom: 0.5rem; font-size: 1.02rem; }
+
+    /* Tables */
+    .table-wrapper { overflow-x: auto; margin: 1.5rem 0 2rem; }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    thead th { background: #0D7C66; color: #FFFFFF; padding: 0.75rem 1rem; text-align: left; font-weight: 600; }
+    tbody td { padding: 0.75rem 1rem; border-bottom: 1px solid #E8E6E3; }
+    tbody tr:nth-child(even) { background: #F5F5F3; }
+
+    /* Callout */
+    .callout { background: #FFF3EE; border-left: 4px solid #E8734A; padding: 1.25rem 1.5rem; border-radius: 0 8px 8px 0; margin: 1.5rem 0; }
+    .callout strong { color: #E8734A; }
+
+    /* FAQ */
+    .faq-section { max-width: 800px; margin: 0 auto; padding: 2rem; }
+    .faq-section h2 { font-family: 'Source Serif 4', serif; font-size: 1.6rem; font-weight: 700; margin-bottom: 1.5rem; }
+    .faq-item { border-bottom: 1px solid #E8E6E3; padding: 1.25rem 0; }
+    .faq-item:last-child { border-bottom: none; }
+    .faq-question { font-weight: 600; font-size: 1.05rem; margin-bottom: 0.5rem; color: #1A1A2E; }
+    .faq-answer { color: #5A5A6E; font-size: 0.98rem; line-height: 1.7; }
+
+    /* CTA Box */
+    .cta-box { max-width: 800px; margin: 2rem auto 3rem; padding: 2rem; background: #FFFFFF; border: 1px solid #E8E6E3; border-radius: 8px; text-align: center; }
+    .cta-box p { margin-bottom: 1rem; font-size: 1.05rem; color: #5A5A6E; }
+    .cta-link { display: inline-block; color: #0D7C66; font-weight: 600; font-size: 1.1rem; text-decoration: none; padding: 0.75rem 2rem; border: 2px solid #0D7C66; border-radius: 6px; transition: all 0.2s; }
+    .cta-link:hover { background: #0D7C66; color: #FFFFFF; }
+
+    /* Footer */
+    footer { background: #FFFFFF; border-top: 1px solid #E8E6E3; padding: 2rem; margin-top: 2rem; }
+    .footer-container { max-width: 1200px; margin: 0 auto; text-align: center; font-size: 0.9rem; color: #8A8A8A; }
+    .footer-links { margin-bottom: 1rem; display: flex; justify-content: center; gap: 1.5rem; flex-wrap: wrap; }
+    .footer-links a { color: #0D7C66; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: #E8734A; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .article-hero h1 { font-size: 1.8rem; }
+      .article-hero { padding: 2rem 1.25rem 1.5rem; }
+      .answer-box, .article-body, .faq-section, .cta-box { padding-left: 1.25rem; padding-right: 1.25rem; }
+      .article-meta { flex-direction: column; gap: 0.25rem; }
+    }
+    @media (max-width: 480px) {
+      nav { padding: 1rem; }
+      .nav-links { gap: 1rem; font-size: 0.85rem; }
+      .article-hero h1 { font-size: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="https://withclearpath.com" class="logo">ClearPath</a>
+      <ul class="nav-links">
+        <li><a href="https://withclearpath.com/guides">Guides</a></li>
+        <li><a href="https://withclearpath.com/blog/" aria-current="page">Blog</a></li>
+        <li><a href="https://withclearpath.com/tools">Tools</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Article Hero -->
+  <section class="article-hero">
+    <h1>Should You File an 83(b) Election? The Complete Guide with Tax Calculations</h1>
+    <div class="article-meta">
+      <span>March 19, 2026</span>
+      <span>9 min read</span>
+    </div>
+  </section>
+
+  <!-- Answer Box -->
+  <div class="answer-box">
+    <p><strong>Yes, you should almost always file an 83(b) election if you receive restricted stock or early-exercise stock options at a startup.</strong> The 83(b) election tells the IRS to tax you on the current value of your shares — which at an early-stage startup is often pennies — instead of taxing you years later when the shares vest and could be worth hundreds of thousands. The catch: you have exactly 30 calendar days from your grant date to file, the deadline is absolute, and if the company fails you don't get those taxes back. But for most early-stage startup employees, the math overwhelmingly favors filing. Here's exactly how it works and when it doesn't make sense.</p>
+  </div>
+
+  <!-- Article Body -->
+  <div class="article-body">
+
+    <h2>What an 83(b) Election Actually Does</h2>
+
+    <p>When you receive restricted stock — actual shares that you own but that vest over time — the IRS normally taxes you on each vesting date. The taxable amount is the fair market value of the shares at vesting minus whatever you paid for them. That's ordinary income, taxed at your marginal rate (up to 37% federal).</p>
+
+    <p>An 83(b) election flips this. You're telling the IRS: "Tax me now, on the current value, instead of later." If you're at an early-stage startup where the fair market value (the 409A valuation) is $0.10 per share and you received 40,000 shares, you'd owe income tax on $4,000 instead of waiting until those shares are worth potentially $20 each.</p>
+
+    <p>The real magic is what happens to future appreciation. Without an 83(b), every dollar of growth is taxed as ordinary income when it vests. With an 83(b), that growth is taxed as long-term capital gains (if you hold for 12+ months after filing) — maxing out at 20% federal instead of 37%. That's a 17-percentage-point difference on potentially life-changing money.</p>
+
+    <h2>The Tax Math: With vs. Without an 83(b)</h2>
+
+    <p>Let me walk through a real scenario. Say you join a Series A startup as employee #25. You receive 40,000 shares of restricted stock with a 4-year vesting schedule (25% cliff at year 1, then monthly). The current 409A valuation is $0.25/share, and you pay $0.25/share to purchase them (common with early exercise).</p>
+
+    <div class="table-wrapper">
+      <table>
+        <thead>
+          <tr>
+            <th></th>
+            <th>Without 83(b)</th>
+            <th>With 83(b)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>At grant (Day 1)</strong></td>
+            <td>No tax event</td>
+            <td>Tax on $10,000 FMV - $10,000 paid = $0 income tax</td>
+          </tr>
+          <tr>
+            <td><strong>Year 1 vest (10,000 shares @ $2.00 FMV)</strong></td>
+            <td>$17,500 ordinary income ($20K - $2.5K cost)</td>
+            <td>No tax event</td>
+          </tr>
+          <tr>
+            <td><strong>Year 2 vest (10,000 shares @ $5.00 FMV)</strong></td>
+            <td>$47,500 ordinary income</td>
+            <td>No tax event</td>
+          </tr>
+          <tr>
+            <td><strong>Year 3 vest (10,000 shares @ $8.00 FMV)</strong></td>
+            <td>$77,500 ordinary income</td>
+            <td>No tax event</td>
+          </tr>
+          <tr>
+            <td><strong>Year 4 vest (10,000 shares @ $12.00 FMV)</strong></td>
+            <td>$117,500 ordinary income</td>
+            <td>No tax event</td>
+          </tr>
+          <tr>
+            <td><strong>Total taxable as ordinary income</strong></td>
+            <td>$260,000</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td><strong>Federal tax at 35% bracket</strong></td>
+            <td>$91,000</td>
+            <td>$0</td>
+          </tr>
+          <tr>
+            <td><strong>Sale at $12/share (LTCG at 20%)</strong></td>
+            <td>$0 (basis = FMV at vest)</td>
+            <td>$470,000 gain × 20% = $94,000</td>
+          </tr>
+          <tr>
+            <td><strong>Total federal tax</strong></td>
+            <td><strong>$91,000</strong></td>
+            <td><strong>$94,000</strong></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <p>Wait — in this example the numbers are close? Here's the thing: this assumes you sell immediately at year 4. But if the stock keeps growing (as it does when a startup succeeds), the gap widens dramatically. If those shares are worth $30 at IPO, without the 83(b) you'd have paid $91K in ordinary income tax along the way, plus you'd owe LTCG on sale. With the 83(b), your entire $1.19M gain is long-term capital gains at 20%.</p>
+
+    <p>But the real win is earlier. With the 83(b) filed when shares are worth $0.25, you pay $0 in income tax upfront (because you paid fair market value). Without it, you're getting hit with five-figure tax bills at every vest — cash you have to come up with even though you can't sell the shares.</p>
+
+    <div class="callout">
+      <p><strong>The liquidity problem is real.</strong> Without an 83(b), you owe income tax when shares vest — but at a private company, you can't sell those shares to pay the bill. I've seen engineers facing $40K+ tax bills at vesting with no way to cover them except savings or loans. The 83(b) eliminates this entirely.</p>
+    </div>
+
+    <h2>The 30-Day Deadline: How to Actually File</h2>
+
+    <p>This is the part that trips people up. You have exactly 30 calendar days from the date you receive the restricted stock to file your 83(b) election with the IRS. Not 30 business days. Not 30 days from when your vesting starts. Thirty calendar days from the grant date.</p>
+
+    <p>Here's the step-by-step process:</p>
+
+    <h3>Step 1: Write the election letter</h3>
+    <p>There's no official IRS form — it's just a letter that includes your name, address, SSN, a description of the property (number of shares, company name), the date you received it, the fair market value on that date, and the amount you paid. Your company's legal team or equity management platform (Carta, Pulley, AngelList) usually provides a pre-filled template.</p>
+
+    <h3>Step 2: Mail it to the IRS</h3>
+    <p>Send it via certified mail to the IRS Service Center where you file your return. Keep the certified mail receipt — this is your proof of timely filing. Some tax advisors recommend sending it to both the IRS Service Center and the IRS office in Austin, TX (where most individual filings are processed) as a belt-and-suspenders approach.</p>
+
+    <h3>Step 3: Give a copy to your company</h3>
+    <p>Your employer needs a copy for their records. This is required.</p>
+
+    <h3>Step 4: Attach a copy to your tax return</h3>
+    <p>When you file your annual tax return for that year, attach a copy of the 83(b) election. Note: as of 2015, the IRS no longer requires you to file a copy with your return, but most tax professionals still recommend it.</p>
+
+    <div class="callout">
+      <p><strong>Set a calendar reminder the day you receive restricted stock.</strong> I'm serious — open your phone right now and create a reminder for 20 days out (giving yourself a 10-day buffer). This is the single most common and most costly mistake in equity compensation. Missing the deadline is irreversible.</p>
+    </div>
+
+    <h2>When the 83(b) Doesn't Make Sense</h2>
+
+    <p>The 83(b) isn't always the right move. Here are the situations where you should think twice:</p>
+
+    <p><strong>Late-stage companies with high 409A valuations.</strong> If you join a Series D startup where the 409A valuation is already $15/share and you receive 10,000 restricted shares, filing an 83(b) means paying income tax on $150,000 right now. If the company's stock drops or goes sideways, you've paid a massive tax bill on value you'll never realize — and you don't get that money back.</p>
+
+    <p><strong>High probability of leaving before vesting.</strong> If you file an 83(b) and leave before your shares vest, the company repurchases your unvested shares (usually at your purchase price). The income tax you paid on those forfeited shares is gone. You can claim a capital loss, but that's capped at $3,000/year against ordinary income. If you're not confident you'll stay through vesting, the risk-reward changes.</p>
+
+    <p><strong>You can't afford the tax bill.</strong> Even at early-stage valuations, if you received a large grant, the upfront tax can be meaningful. If paying it would drain your emergency fund or require debt, you need to weigh that against the potential future savings.</p>
+
+    <p><strong>RSUs don't qualify.</strong> This is a common misconception. RSUs (Restricted Stock Units) are not actual shares — they're a promise to deliver shares at vesting. Since you don't own property until vesting, there's nothing to make an 83(b) election on. The 83(b) only works with restricted stock and early-exercised options.</p>
+
+    <h2>83(b) + Early Exercise: The Startup Employee Power Move</h2>
+
+    <p>The most powerful application of the 83(b) election is combining it with early exercise of stock options. Here's how it works:</p>
+
+    <p>Many startups allow you to exercise your stock options before they vest (called "early exercise"). When you do this, you receive restricted stock — shares that you own but that the company can repurchase if you leave before vesting. Because you now hold restricted stock, you can file an 83(b) election.</p>
+
+    <p>Let's say you join a seed-stage startup. You're granted 50,000 ISOs with a strike price of $0.10/share (which equals the current 409A valuation). You early-exercise all 50,000 shares for $5,000 and immediately file an 83(b) election.</p>
+
+    <p>Your 83(b) taxable income: $0. The FMV ($0.10) minus what you paid ($0.10) equals zero. You've started the long-term capital gains clock on day one.</p>
+
+    <p>Fast forward four years. The company goes public at $25/share. Your 50,000 shares are worth $1,250,000. Because you filed the 83(b) and held for more than a year, your entire $1,245,000 gain ($1.25M minus your $5,000 cost basis) is taxed at the long-term capital gains rate of 20% — that's $249,000 in federal tax.</p>
+
+    <p>Without the 83(b)? Each vesting tranche would have been taxed as ordinary income at the FMV on the vesting date. If you're in the 37% bracket, you could easily pay $100,000+ more in taxes over the vesting period. Plus, with ISOs, you'd potentially trigger the Alternative Minimum Tax (AMT) at each exercise/vest event, adding another layer of complexity and cost.</p>
+
+    <h2>Common Mistakes That Cost People Real Money</h2>
+
+    <p><strong>Mistake #1: Missing the 30-day deadline.</strong> I can't emphasize this enough. No extensions, no exceptions, no appeals. If you miss it, you're locked into ordinary income taxation at vesting for the life of the grant. I've talked to people who lost six figures because they "meant to get to it" and ran out of time.</p>
+
+    <p><strong>Mistake #2: Not sending via certified mail.</strong> If the IRS can't find your 83(b) election and you have no proof of mailing, it's as if you never filed. Always use certified mail and keep the receipt forever.</p>
+
+    <p><strong>Mistake #3: Filing for the wrong grant.</strong> If you receive multiple equity grants, each one requires its own 83(b) election with its own 30-day window. Don't assume one election covers everything.</p>
+
+    <p><strong>Mistake #4: Forgetting state taxes.</strong> The 83(b) election applies to federal taxes, but most states follow federal treatment. California, New York, and other high-tax states recognize the 83(b), which amplifies your savings. In California, the difference between ordinary income (13.3% top rate) and long-term capital gains (also taxed as ordinary income in CA, but the lower federal rate still helps) is significant.</p>
+
+    <p><strong>Mistake #5: Not considering QSBS.</strong> If your company qualifies for the Qualified Small Business Stock (QSBS) exclusion under Section 1202, the first $10 million of gain (or 10x your cost basis) could be completely tax-free at the federal level. An 83(b) election is often a prerequisite for maximizing QSBS benefits because it starts the required 5-year holding period earlier.</p>
+
+    <h2>The Decision Framework</h2>
+
+    <p>Here's how I think about the 83(b) decision for anyone who asks:</p>
+
+    <p><strong>File the 83(b) if:</strong> The current FMV is low (early-stage startup), you paid close to FMV for the shares, you're reasonably confident you'll stay through a meaningful portion of your vesting schedule, and you can afford any upfront tax bill without financial strain.</p>
+
+    <p><strong>Think carefully if:</strong> The 409A valuation is already high (Series C+), you're not sure you'll stay at the company, or the upfront tax bill would be financially painful.</p>
+
+    <p><strong>Don't file if:</strong> You have RSUs (it's not an option), the tax bill would create genuine financial hardship, or you have strong reasons to believe the stock will decrease in value.</p>
+
+    <p>When in doubt at an early-stage startup, file it. The $0-to-minimal cost of filing when shares are worth pennies is almost always worth the potential upside of long-term capital gains treatment on what could become a meaningful amount of money.</p>
+
+  </div>
+
+  <!-- FAQ Section -->
+  <section class="faq-section">
+    <h2>Frequently Asked Questions</h2>
+
+    <div class="faq-item">
+      <div class="faq-question">What is an 83(b) election?</div>
+      <div class="faq-answer">An 83(b) election is a letter you file with the IRS within 30 days of receiving restricted stock. It tells the IRS you want to pay income tax on the stock now, at today's fair market value, instead of later when the shares vest. This can save significant money if the stock appreciates, because future gains are taxed as long-term capital gains instead of ordinary income.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What is the deadline for filing an 83(b) election?</div>
+      <div class="faq-answer">You must file your 83(b) election with the IRS within 30 calendar days of receiving the restricted stock (your grant date). This deadline is absolute — there are no extensions, no exceptions, and no way to file late. If you miss it by even one day, you lose the option permanently for that grant.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can you file an 83(b) election for RSUs?</div>
+      <div class="faq-answer">No. You cannot file an 83(b) election for RSUs (Restricted Stock Units). The 83(b) election only applies to restricted stock — actual shares you own but that are subject to vesting. RSUs are a promise to deliver shares in the future, not actual shares, so they don't qualify.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">What happens if I file an 83(b) election and then leave the company before vesting?</div>
+      <div class="faq-answer">If you leave before fully vesting, the company buys back your unvested shares (usually at the price you paid). The taxes you paid on those forfeited shares are gone — you don't get a refund. You can claim a capital loss on your tax return for the amount you paid for the forfeited shares, but the income tax you paid via the 83(b) election on those shares is not recoverable.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How much does an 83(b) election save on taxes?</div>
+      <div class="faq-answer">The savings depend on how much the stock appreciates. For example, if you receive 10,000 shares at $0.10/share and file an 83(b), you pay tax on $1,000 of income. If those shares are worth $5 each when they vest four years later, without an 83(b) you'd owe ordinary income tax on $50,000. With the 83(b), that $49,000 gain is taxed as long-term capital gains (20% max) instead of ordinary income (up to 37%), potentially saving over $8,000 in federal taxes alone.</div>
+    </div>
+  </section>
+
+  <!-- CTA Box -->
+  <div class="cta-box">
+    <p>Understanding equity comp decisions like the 83(b) election is the first step to keeping more of what you've earned.</p>
+    <a href="https://withclearpath.com/blog/" class="cta-link">Browse All Guides →</a>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <div class="footer-links">
+        <a href="https://withclearpath.com">Home</a>
+        <a href="https://withclearpath.com/guides">Guides</a>
+        <a href="https://withclearpath.com/blog/">Blog</a>
+        <a href="https://withclearpath.com/tools">Tools</a>
+      </div>
+      <div class="footer-copyright">&copy; 2026 ClearPath. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
