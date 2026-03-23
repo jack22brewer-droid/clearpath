@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="How the Alternative Minimum Tax (AMT) works with incentive stock options (ISOs): triggers, calculations, AMT credit carryforward, and strategies to minimize your bill.">
+    <meta name="keywords" content="AMT stock options, alternative minimum tax, ISO exercise, AMT credit, equity compensation tax">
+    <meta property="og:title" content="How Does AMT Work With Stock Options? A Plain-English Guide">
+    <meta property="og:description" content="The Alternative Minimum Tax catches ISO exercises by surprise. Learn exactly how AMT is calculated, when it triggers, and strategies to keep your bill manageable.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://withclearpath.com/blog/amt-stock-options-explained">
+    <meta property="article:published_time" content="2026-03-23">
+    <link rel="canonical" href="https://withclearpath.com/blog/amt-stock-options-explained">
+    <title>How Does AMT Work With Stock Options? A Plain-English Guide | ClearPath</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTR797YP2Y"></script>
+    <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-NTR797YP2Y');</script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #FAFAF8;
+            color: #1A1A2E;
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: #FFFFFF;
+            border-bottom: 1px solid #E8E6E3;
+            padding: 1.5rem 2rem;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .nav-brand {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0D7C66;
+            text-decoration: none;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            color: #1A1A2E;
+            text-decoration: none;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: #0D7C66;
+        }
+
+        /* Main content wrapper */
+        main {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Hero section */
+        .article-hero {
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 3px solid #0D7C66;
+        }
+
+        .article-hero h1 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 2.4rem;
+            font-weight: 700;
+            color: #1A1A2E;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+
+        .article-meta {
+            display: flex;
+            gap: 1.5rem;
+            color: #5A5A6E;
+            font-size: 0.9rem;
+        }
+
+        /* Answer box */
+        .answer-box {
+            background-color: #E8F5F0;
+            border-left: 4px solid #0D7C66;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .answer-box h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.3rem;
+            color: #0D7C66;
+            margin-bottom: 0.75rem;
+        }
+
+        .answer-box p {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #1A1A2E;
+        }
+
+        /* Article body */
+        .article-body h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.6rem;
+            color: #1A1A2E;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .article-body p {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            margin-bottom: 1.25rem;
+            color: #1A1A2E;
+        }
+
+        .article-body strong {
+            color: #0D7C66;
+            font-weight: 600;
+        }
+
+        .article-body ul, .article-body ol {
+            margin: 1rem 0 1.5rem 1.5rem;
+            font-size: 1.05rem;
+            line-height: 1.8;
+        }
+
+        .article-body li {
+            margin-bottom: 0.5rem;
+        }
+
+        /* Info table */
+        .info-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            font-size: 0.95rem;
+        }
+
+        .info-table th {
+            background-color: #0D7C66;
+            color: #FFFFFF;
+            padding: 0.75rem 1rem;
+            text-align: left;
+            font-weight: 600;
+        }
+
+        .info-table td {
+            padding: 0.75rem 1rem;
+            border-bottom: 1px solid #E8E6E3;
+        }
+
+        .info-table tr:nth-child(even) {
+            background-color: #F5F5F3;
+        }
+
+        /* Callout box */
+        .callout {
+            background-color: #FFF8F5;
+            border-left: 4px solid #E8734A;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .callout p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+        }
+
+        /* FAQ section */
+        .faq-section {
+            margin-top: 3rem;
+            padding-top: 2rem;
+            border-top: 2px solid #E8E6E3;
+        }
+
+        .faq-section h2 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.6rem;
+            color: #1A1A2E;
+            margin-bottom: 1.5rem;
+        }
+
+        .faq-item {
+            background-color: #FFFFFF;
+            border: 1px solid #E8E6E3;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .faq-item h3 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.1rem;
+            color: #0D7C66;
+            margin-bottom: 0.75rem;
+        }
+
+        .faq-item p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            color: #1A1A2E;
+        }
+
+        /* CTA box */
+        .cta-box {
+            background-color: #FFFFFF;
+            border: 2px solid #E8E6E3;
+            border-radius: 12px;
+            padding: 2.5rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .cta-box h3 {
+            font-family: 'Source Serif 4', serif;
+            font-size: 1.4rem;
+            color: #1A1A2E;
+            margin-bottom: 0.75rem;
+        }
+
+        .cta-box p {
+            color: #5A5A6E;
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: #E8734A;
+            color: #FFFFFF;
+            padding: 0.85rem 2rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1rem;
+            transition: background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #d4623d;
+        }
+
+        /* Footer */
+        footer {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 2rem;
+            text-align: center;
+            color: #5A5A6E;
+            font-size: 0.9rem;
+            border-top: 1px solid #E8E6E3;
+            margin-top: 3rem;
+        }
+
+        footer a {
+            color: #0D7C66;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+                padding: 1rem;
+            }
+
+            .article-hero h1 {
+                font-size: 1.8rem;
+            }
+
+            main {
+                padding: 2rem 1rem;
+            }
+
+            .article-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .info-table {
+                font-size: 0.85rem;
+            }
+
+            .info-table th, .info-table td {
+                padding: 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <a href="/" class="nav-brand">ClearPath</a>
+        <ul class="nav-links">
+            <li><a href="/guides">Guides</a></li>
+            <li><a href="/blog">Blog</a></li>
+            <li><a href="/tools">Tools</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <article>
+            <!-- Hero -->
+            <header class="article-hero">
+                <h1>How Does AMT Work With Stock Options? A Plain-English Guide</h1>
+                <div class="article-meta">
+                    <span>March 23, 2026</span>
+                    <span>9 min read</span>
+                </div>
+            </header>
+
+            <!-- Answer Box -->
+            <section class="answer-box">
+                <h2>The Short Answer</h2>
+                <p>When you exercise incentive stock options (ISOs) and hold the shares, the spread between your strike price and the fair market value counts as income under the Alternative Minimum Tax system — even though it's not taxed as regular income. If that AMT "income" pushes your AMT calculation above your regular tax, you pay the difference as additional tax. For 2026, AMT rates are 26% on the first ~$232,600 of AMT income above the exemption and 28% above that. The good news: any AMT you pay generates a credit you can recover in future years when your regular tax exceeds AMT. The key strategy is to limit how many ISOs you exercise in a single year to stay below the AMT trigger point.</p>
+            </section>
+
+            <!-- Article Body -->
+            <div class="article-body">
+
+                <h2>Why ISOs and AMT Are Connected</h2>
+
+                <p>Here's the thing that trips people up: when you exercise ISOs and keep the shares, nothing happens on your regular tax return. No income. No withholding. Your W-2 looks the same. You'd think you got away with something.</p>
+
+                <p>You didn't. The IRS has a parallel tax system called the Alternative Minimum Tax, and it was practically designed to catch this exact situation. Under AMT rules, the spread on your ISO exercise — the difference between what you paid (strike price) and what the shares were worth (FMV) — is treated as taxable income. You calculate your taxes two ways: the regular way and the AMT way. You pay whichever number is higher.</p>
+
+                <p>This is why people who exercise large ISO grants sometimes get a surprise six-figure tax bill in April. The shares might be illiquid. The company might still be private. But the IRS doesn't care — the AMT bill is real.</p>
+
+                <h2>How the AMT Calculation Actually Works</h2>
+
+                <p>Let's walk through this step by step with real numbers. Say you're a software engineer earning $180,000 in base salary. You exercise 10,000 ISOs with a $2 strike price when the 409A valuation (FMV) is $12 per share.</p>
+
+                <p>Your ISO spread is: (12 - 2) × 10,000 = <strong>$100,000</strong>.</p>
+
+                <p>Here's what the AMT calculation looks like:</p>
+
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Step</th>
+                            <th>Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Regular taxable income</td>
+                            <td>$180,000</td>
+                        </tr>
+                        <tr>
+                            <td>+ ISO spread (AMT adjustment)</td>
+                            <td>$100,000</td>
+                        </tr>
+                        <tr>
+                            <td>= AMT income (AMTI)</td>
+                            <td>$280,000</td>
+                        </tr>
+                        <tr>
+                            <td>− AMT exemption (2026, single filer)</td>
+                            <td>~$88,100</td>
+                        </tr>
+                        <tr>
+                            <td>= Taxable AMT base</td>
+                            <td>$191,900</td>
+                        </tr>
+                        <tr>
+                            <td>× AMT rate (26%)</td>
+                            <td>$49,894</td>
+                        </tr>
+                        <tr>
+                            <td>− Regular tax liability</td>
+                            <td>~$32,580</td>
+                        </tr>
+                        <tr>
+                            <td>= <strong>AMT owed</strong></td>
+                            <td><strong>$17,314</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p>That $17,314 is extra tax on top of your regular income tax — paid entirely because of the ISO exercise. And remember, you didn't sell anything. You still hold those shares. You need cash from somewhere else to pay this bill.</p>
+
+                <div class="callout">
+                    <p><strong>Watch out:</strong> The AMT exemption phases out at higher income levels. For 2026, the phaseout starts around $609,350 for single filers. If your AMTI is above that, you lose $0.25 of exemption for every $1 of additional income, making the effective AMT rate even steeper.</p>
+                </div>
+
+                <h2>The AMT Credit: Getting Your Money Back (Eventually)</h2>
+
+                <p>Here's the silver lining that makes AMT less painful than it initially looks. Any AMT you pay because of ISO exercises generates an <strong>AMT credit carryforward</strong> (Form 8801). This credit can be used in future years when your regular tax exceeds your AMT calculation.</p>
+
+                <p>Think of it as a forced loan to the IRS. You overpay now, and in future years — especially after you sell the shares and the ISO adjustment disappears — your regular tax will be higher than AMT, and you'll get to apply the credit to reduce your bill.</p>
+
+                <p>In our example above, you'd carry forward a $17,314 credit. If the next year your regular tax exceeds AMT by $10,000, you'd use $10,000 of the credit that year and carry the remaining $7,314 forward again. It can take several years to fully recover, but you will eventually get it back.</p>
+
+                <p>There's no expiration date on the AMT credit. It carries forward indefinitely until you use it all.</p>
+
+                <h2>When AMT Doesn't Apply</h2>
+
+                <p>Not every ISO exercise triggers AMT. Here are the situations where you're in the clear:</p>
+
+                <ul>
+                    <li><strong>Same-day sale (disqualifying disposition):</strong> If you exercise and sell ISOs in the same calendar year, the spread is taxed as ordinary income on your regular return. No AMT adjustment needed because the income already shows up in both systems.</li>
+                    <li><strong>Small exercises below the exemption:</strong> If the ISO spread plus your other AMT adjustments doesn't push your AMT calculation above your regular tax, no AMT is owed. This is the sweet spot you want to target.</li>
+                    <li><strong>NSO exercises:</strong> Non-qualified stock options are always taxed as ordinary income at exercise. AMT doesn't apply because there's no preferential treatment to "catch."</li>
+                </ul>
+
+                <h2>The Yearly Exercise Strategy: Stay Under the AMT Line</h2>
+
+                <p>This is where most of the actionable advice lives. Instead of exercising all your ISOs at once, you can spread exercises across multiple tax years to keep each year's AMT adjustment small enough that it doesn't trigger additional tax.</p>
+
+                <p>Here's how to figure out your "safe" exercise amount:</p>
+
+                <ol>
+                    <li><strong>Calculate your tentative AMT</strong> without any ISO exercise. Use your regular income, deductions, and any other AMT preference items.</li>
+                    <li><strong>Find the gap</strong> between your regular tax and your tentative AMT. This gap is your "AMT cushion."</li>
+                    <li><strong>Divide the cushion by the per-share spread</strong> to find how many options you can exercise without triggering AMT.</li>
+                </ol>
+
+                <p>For example, if your AMT cushion is $30,000 and the spread on each option is $10, you can exercise up to 3,000 options that year without paying a dime of AMT. Exercise 3,001 and you start paying the 26% AMT rate on the excess.</p>
+
+                <p>This strategy works best when you have several years before an IPO or exit event. If your company is going public next quarter, you have less room to spread things out — but even exercising in two batches (December and January) across a year boundary can cut the AMT impact significantly.</p>
+
+                <h2>Real-World Scenario: The $400K ISO Exercise Gone Wrong</h2>
+
+                <p>I've seen this happen more times than I'd like. Engineer joins a startup with a $1 strike price. Company grows. 409A hits $41 per share. They exercise 10,000 options in one shot because the IPO window is opening.</p>
+
+                <p>The ISO spread: ($41 - $1) × 10,000 = <strong>$400,000</strong>.</p>
+
+                <p>On top of their $200,000 salary, that's $600,000 in AMTI. After the exemption and phaseout, they're looking at roughly <strong>$85,000–$95,000 in AMT</strong>. In cash. Due in April. For shares they can't sell yet because of the lockup period.</p>
+
+                <p>If they'd exercised 2,500 options per year over four years, the annual AMT hit would have been roughly $10,000–$15,000 each year — a total of $40,000–$60,000 instead of $85,000–$95,000. The graduated approach saves real money because it keeps more income in the 26% AMT bracket and makes better use of the exemption each year.</p>
+
+                <h2>AMT and Early Exercise (83(b) Elections)</h2>
+
+                <p>If your company allows early exercise of unvested options, you can file an <a href="/blog/83b-election-explained" style="color: #0D7C66;">83(b) election</a> and exercise when the FMV is still close to the strike price. This is powerful for AMT purposes because the spread — and therefore the AMT adjustment — is tiny or even zero.</p>
+
+                <p>Say you early-exercise 10,000 options at a $1 strike when the FMV is $1.50. Your AMT adjustment is only $5,000 instead of $100,000. You pay negligible AMT (or none), start your long-term capital gains holding period immediately, and potentially qualify for QSBS exclusion if the company meets the requirements.</p>
+
+                <p>The risk, of course, is that if you leave or get fired before the shares vest, you forfeit them — and you don't get the exercise price back. Early exercise is a bet that the company will succeed and you'll stay long enough to vest.</p>
+
+                <h2>Key AMT Numbers for 2026</h2>
+
+                <table class="info-table">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Single</th>
+                            <th>Married Filing Jointly</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>AMT exemption</td>
+                            <td>~$88,100</td>
+                            <td>~$137,000</td>
+                        </tr>
+                        <tr>
+                            <td>Phaseout begins</td>
+                            <td>~$609,350</td>
+                            <td>~$1,218,700</td>
+                        </tr>
+                        <tr>
+                            <td>26% rate applies up to</td>
+                            <td>~$232,600</td>
+                            <td>~$232,600</td>
+                        </tr>
+                        <tr>
+                            <td>28% rate above</td>
+                            <td>$232,600+</td>
+                            <td>$232,600+</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><em>Note: These are approximate 2026 figures based on inflation adjustments. Check IRS publications for exact numbers when filing.</em></p>
+
+                <h2>What to Do Right Now</h2>
+
+                <p>If you're sitting on unexercised ISOs, here's the practical playbook:</p>
+
+                <ol>
+                    <li><strong>Get your company's current 409A valuation.</strong> This is the FMV the IRS will use. HR or your equity admin can provide it.</li>
+                    <li><strong>Calculate your per-share spread.</strong> FMV minus strike price. This is your AMT exposure per share.</li>
+                    <li><strong>Run a tax projection.</strong> Use tax software or work with a CPA to find your AMT cushion for the current year. Free tools like the AMT calculator on Turbotax can give you a rough estimate.</li>
+                    <li><strong>Exercise up to — but not past — your cushion.</strong> Set a calendar reminder to repeat this analysis each January.</li>
+                    <li><strong>Consider early exercise if available.</strong> Especially if you joined recently and the FMV is still close to strike. The <a href="/blog/83b-election-explained" style="color: #0D7C66;">83(b) election window is only 30 days</a>.</li>
+                </ol>
+
+                <p>AMT is complicated, and the stakes are high enough that a few hundred dollars for a CPA who specializes in equity comp is money well spent. But understanding the mechanics yourself means you can ask the right questions and catch mistakes before they become five-figure problems.</p>
+
+            </div>
+
+            <!-- FAQ Section -->
+            <section class="faq-section">
+                <h2>Frequently Asked Questions</h2>
+
+                <div class="faq-item">
+                    <h3>Q: Can I avoid AMT entirely on ISO exercises?</h3>
+                    <p>A: Yes, in two ways. First, if you exercise and sell in the same calendar year (a disqualifying disposition), the income is taxed as ordinary income and no AMT adjustment applies. Second, if the ISO spread is small enough that your AMT calculation stays below your regular tax, no additional AMT is owed. The yearly exercise strategy targets this second approach — exercising just enough each year to stay under the AMT line.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: What happens if my company's stock drops after I exercise and pay AMT?</h3>
+                    <p>A: This is the nightmare scenario that hit thousands of people during the dot-com bust. You pay AMT based on the FMV at exercise, but if the stock crashes, the shares might be worth less than the tax you paid. You still have the AMT credit carryforward, but it can take years to recover. If the shares become worthless, you can claim a capital loss, but it doesn't directly offset the AMT already paid. This is a key reason to be cautious about exercising large ISO grants in illiquid, pre-IPO companies.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: Does AMT apply to RSUs?</h3>
+                    <p>A: No. RSUs are taxed as ordinary income when they vest, so there's no preferential treatment for AMT to catch. The AMT adjustment specifically targets the ISO "bargain element" — the spread that escapes regular income tax when you exercise and hold. If you have both RSUs and ISOs, the RSU income can actually reduce your AMT cushion by pushing your regular tax higher, giving you less room for ISO exercises.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: How long does it take to recover AMT credits?</h3>
+                    <p>A: It depends on the gap between your regular tax and AMT in future years. If you sell the ISO shares (creating a regular income event), you'll typically recover a large portion of the credit in the year of sale. Without a sale, credits are recovered gradually — often over 3 to 7 years. There's no expiration, so you'll eventually get it all back. Filing Form 8801 each year is essential to claim the credit.</p>
+                </div>
+
+                <div class="faq-item">
+                    <h3>Q: Should I hire a CPA or can I handle AMT calculations myself?</h3>
+                    <p>A: For rough planning — figuring out how many options to exercise — tax software and online AMT calculators work fine. But when it comes to filing, especially if you're dealing with six-figure spreads, state-specific AMT rules (California has its own AMT), or a combination of ISOs, RSUs, and ESPP shares, a CPA who specializes in equity compensation is worth every penny. A single mistake on Form 6251 can cost you thousands in missed credits or unnecessary payments.</p>
+                </div>
+            </section>
+
+            <!-- CTA Box -->
+            <section class="cta-box">
+                <h3>Build Your Equity Tax Strategy</h3>
+                <p>AMT is just one piece of the equity compensation puzzle. Our guides cover ISO vs. NSO comparisons, RSU taxation, 83(b) elections, and more — everything you need to make informed decisions about your stock options.</p>
+                <a href="/blog/" class="cta-button">Browse All Guides →</a>
+            </section>
+        </article>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2026 ClearPath. Equity compensation education made clear.</p>
+        <p><a href="/">Home</a> | <a href="/guides">Guides</a> | <a href="/blog">Blog</a> | <a href="/tools">Tools</a></p>
+        <p style="margin-top: 1rem; font-size: 0.85rem; color: #999;">This content is for educational purposes only and is not tax or legal advice. Consult a tax professional for your specific situation.</p>
+    </footer>
+
+    <!-- Schema markup for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "How Does AMT Work With Stock Options? A Plain-English Guide",
+        "description": "Learn how the Alternative Minimum Tax applies to incentive stock options: triggers, calculations, AMT credit carryforward, and strategies to minimize your tax bill.",
+        "datePublished": "2026-03-23",
+        "author": {
+            "@type": "Organization",
+            "name": "ClearPath",
+            "url": "https://withclearpath.com"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "ClearPath",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://withclearpath.com/logo.png"
+            }
+        }
+    }
+    </script>
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can I avoid AMT entirely on ISO exercises?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, in two ways. First, if you exercise and sell in the same calendar year (a disqualifying disposition), the income is taxed as ordinary income and no AMT adjustment applies. Second, if the ISO spread is small enough that your AMT calculation stays below your regular tax, no additional AMT is owed. The yearly exercise strategy targets this second approach — exercising just enough each year to stay under the AMT line."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if my company's stock drops after I exercise and pay AMT?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "You pay AMT based on the FMV at exercise, but if the stock crashes, the shares might be worth less than the tax you paid. You still have the AMT credit carryforward, but it can take years to recover. If the shares become worthless, you can claim a capital loss, but it doesn't directly offset the AMT already paid."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does AMT apply to RSUs?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. RSUs are taxed as ordinary income when they vest, so there's no preferential treatment for AMT to catch. The AMT adjustment specifically targets the ISO bargain element — the spread that escapes regular income tax when you exercise and hold."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How long does it take to recover AMT credits?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "It depends on the gap between your regular tax and AMT in future years. If you sell the ISO shares, you'll typically recover a large portion in the year of sale. Without a sale, credits are recovered gradually — often over 3 to 7 years. There's no expiration, so you'll eventually get it all back. Filing Form 8801 each year is essential."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Should I hire a CPA or can I handle AMT calculations myself?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For rough planning, tax software and online AMT calculators work fine. But when filing with six-figure spreads, state-specific AMT rules, or a combination of ISOs, RSUs, and ESPP shares, a CPA who specializes in equity compensation is worth every penny."
+                }
+            }
+        ]
+    }
+    </script>
+</body>
+</html>
