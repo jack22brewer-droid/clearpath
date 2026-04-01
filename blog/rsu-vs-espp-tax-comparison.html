@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="RSU vs ESPP: understand how each is taxed, which generates a bigger tax bill, and how to minimize what you owe. Real numbers, real scenarios.">
+  <meta name="keywords" content="RSU vs ESPP, RSU taxes, ESPP taxes, equity compensation, tech employee taxes">
+  <meta property="og:title" content="RSU vs ESPP: Which Gives You a Better Tax Deal?">
+  <meta property="og:description" content="RSUs and ESPPs are taxed completely differently. Learn which one costs you more and how to plan smarter.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.withclearpath.com/blog/rsu-vs-espp-tax-comparison">
+  <meta property="article:published_time" content="2026-04-01">
+  <meta name="author" content="ClearPath">
+  <link rel="canonical" href="https://www.withclearpath.com/blog/rsu-vs-espp-tax-comparison">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTR797YP2Y"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-NTR797YP2Y');</script>
+
+  <title>RSU vs ESPP: Which Gives You a Better Tax Deal? | ClearPath</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAF8;
+      color: #1A1A2E;
+      line-height: 1.6;
+    }
+
+    /* Navigation */
+    nav {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E8E6E3;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0D7C66;
+      text-decoration: none;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1A1A2E;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0D7C66;
+    }
+
+    /* Hero Section */
+    .hero {
+      max-width: 800px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      border-bottom: 3px solid #0D7C66;
+      padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: #5A5A6E;
+      font-weight: 500;
+    }
+
+    /* Main Content */
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    /* Answer Box */
+    .answer-box {
+      background-color: #E8F5F0;
+      border-left: 4px solid #0D7C66;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .answer-box p {
+      margin: 0;
+    }
+
+    /* Article Body */
+    .article-body h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #1A1A2E;
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.8rem;
+      line-height: 1.8;
+    }
+
+    .article-body strong {
+      font-weight: 600;
+      color: #0D7C66;
+    }
+
+    /* Emphasis box */
+    .emphasis-box {
+      background-color: #FFFFFF;
+      border-left: 4px solid #E8734A;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #5A5A6E;
+    }
+
+    /* Comparison Table */
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+    }
+
+    .comparison-table thead {
+      background-color: #0D7C66;
+    }
+
+    .comparison-table th {
+      color: #FFFFFF;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #E8E6E3;
+    }
+
+    .comparison-table tbody tr:hover {
+      background-color: #E8F5F0;
+    }
+
+    /* Calculation Box */
+    .calculation-box {
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .calculation-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+    }
+
+    .calculation-label {
+      font-weight: 500;
+    }
+
+    .calculation-value {
+      font-weight: 600;
+      color: #0D7C66;
+    }
+
+    .calculation-total {
+      border-top: 2px solid #E8E6E3;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+
+    /* FAQ Section */
+    .faq-item {
+      margin-bottom: 2rem;
+      background-color: #FFFFFF;
+      padding: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid #E8E6E3;
+    }
+
+    .faq-item h3 {
+      font-family: 'Source Serif 4', serif;
+      color: #0D7C66;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    /* CTA Box */
+    .cta-box {
+      background-color: #E8F5F0;
+      border: 2px solid #0D7C66;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .cta-box p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #5A5A6E;
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #E8734A;
+      color: #FFFFFF;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #d4622f;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #FFFFFF;
+      border-top: 1px solid #E8E6E3;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .footer-section a {
+      display: block;
+      color: #5A5A6E;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-section a:hover {
+      color: #0D7C66;
+    }
+
+    .footer-bottom {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid #E8E6E3;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5A5A6E;
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+      }
+
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero,
+      .container {
+        padding: 0 1rem;
+      }
+
+      .article-body h2 {
+        font-size: 1.5rem;
+      }
+
+      .comparison-table {
+        font-size: 0.9rem;
+      }
+
+      .comparison-table th,
+      .comparison-table td {
+        padding: 0.75rem;
+      }
+
+      .cta-box {
+        padding: 1.5rem;
+      }
+
+      .cta-box h3 {
+        font-size: 1.2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <a href="https://www.withclearpath.com/" class="nav-brand">ClearPath</a>
+    <ul class="nav-links">
+      <li><a href="https://www.withclearpath.com/guides">Guides</a></li>
+      <li><a href="https://www.withclearpath.com/blog">Blog</a></li>
+      <li><a href="https://www.withclearpath.com/tools">Tools</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <h1>RSU vs ESPP: Which Gives You a Better Tax Deal?</h1>
+    <p class="hero-meta">April 1, 2026 &nbsp;·&nbsp; 9 min read</p>
+  </header>
+
+  <main class="container">
+    <!-- Answer Box -->
+    <div class="answer-box">
+      <p><strong>Short answer:</strong> RSUs are taxed as ordinary income at vesting — typically 22–37% federal plus state. ESPPs are more complex: the discount (usually 15%) is taxed as ordinary income when you sell, but gains beyond that may qualify for long-term capital gains rates as low as 15% if you hold long enough. A qualifying ESPP disposition can save you 10–22 percentage points in federal taxes versus RSU vesting, but most employees miss the holding period and lose the advantage entirely.</p>
+    </div>
+
+    <div class="article-body">
+
+      <h2>The Core Difference: When and How Each Is Taxed</h2>
+
+      <p>RSUs and ESPPs are two of the most common equity benefits at large tech companies — and they operate on completely different tax logic. Understanding which is more tax-efficient isn't just academic: on a $100,000 equity position, choosing the wrong strategy can cost you $15,000–$22,000 in avoidable taxes.</p>
+
+      <p>Let's establish what each benefit actually is before getting into the tax mechanics.</p>
+
+      <p><strong>RSUs (Restricted Stock Units)</strong> are a grant of company shares that vest over time — typically a 4-year schedule with a 1-year cliff. You don't own anything until they vest. When they vest, you receive shares, and the fair market value on that day is taxed as ordinary income, just like a cash bonus.</p>
+
+      <p><strong>ESPPs (Employee Stock Purchase Plans)</strong> let you purchase company stock at a discount — usually 15% — through payroll deductions. In a qualified ESPP under Section 423, you have an offering period (typically 6–24 months), a purchase date when you buy the stock at the discounted price, and then a sale date. The tax treatment depends almost entirely on when you sell.</p>
+
+      <h2>How RSU Taxes Work: Simple but Expensive</h2>
+
+      <p>RSU taxation has one trigger: vesting. The moment shares vest, the IRS treats the entire fair market value as ordinary income. Your employer withholds taxes — but at the flat 22% supplemental withholding rate, which is almost never enough if you're in the 32% or 37% bracket.</p>
+
+      <p>Here's what that looks like in practice. Imagine you're a software engineer at a large tech company, earning $180,000 in salary. You have $80,000 in RSUs vesting this year.</p>
+
+      <div class="calculation-box">
+        <p><strong>RSU Tax Calculation: Sofia, Sr. Software Engineer (California)</strong></p>
+        <div class="calculation-line">
+          <span class="calculation-label">RSU value at vesting</span>
+          <span class="calculation-value">$80,000</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">Federal tax (37% marginal rate)</span>
+          <span class="calculation-value">−$29,600</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">California state tax (13.3%)</span>
+          <span class="calculation-value">−$10,640</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">FICA taxes (7.65% up to SS wage base)</span>
+          <span class="calculation-value">−$6,120</span>
+        </div>
+        <div class="calculation-line calculation-total">
+          <span class="calculation-label">Net take-home from $80,000 RSU vest</span>
+          <span class="calculation-value">~$33,640</span>
+        </div>
+      </div>
+
+      <p>Sofia keeps less than 42 cents of every dollar that vested. The withholding happens automatically — but only at 22% federal. She owes an additional $12,000 at tax time unless she made estimated quarterly payments. This is the most common RSU tax trap: the surprise April bill.</p>
+
+      <p>After vesting, if Sofia holds the shares and they appreciate, that additional gain is taxed as capital gains — short-term (ordinary income rates) if held under a year, long-term (0%, 15%, or 20% federal) if held over a year.</p>
+
+      <h2>How ESPP Taxes Work: More Complex, Potentially Better</h2>
+
+      <p>ESPP taxation has two moving parts: the discount and the gain. And the IRS splits them differently depending on whether your sale is a "qualifying" or "disqualifying" disposition.</p>
+
+      <p><strong>Qualifying disposition:</strong> You hold the shares for at least 2 years from the offering date AND at least 1 year from the purchase date. This is the favorable outcome.</p>
+
+      <p><strong>Disqualifying disposition:</strong> You sell before meeting both holding periods. This is what most employees do — and it costs them.</p>
+
+      <h2>Side-by-Side: What You Actually Keep</h2>
+
+      <p>Let's compare two employees — both contributing $10,000 to an ESPP with a 15% discount and both receiving $10,000 in RSUs. Same tax bracket (32% federal, 9.3% California).</p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Factor</th>
+            <th>RSU ($10,000 value)</th>
+            <th>ESPP — Qualifying</th>
+            <th>ESPP — Disqualifying</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>What triggers tax</td>
+            <td>Vesting date</td>
+            <td>Sale date</td>
+            <td>Sale date</td>
+          </tr>
+          <tr>
+            <td>Tax on discount/spread</td>
+            <td>N/A (full value = ordinary income)</td>
+            <td>Ordinary income on $1,500 discount</td>
+            <td>Ordinary income on full spread</td>
+          </tr>
+          <tr>
+            <td>Federal ordinary income tax</td>
+            <td>$3,200 (32% of $10,000)</td>
+            <td>$480 (32% of $1,500)</td>
+            <td>$3,200 (32% of $10,000)</td>
+          </tr>
+          <tr>
+            <td>Gains beyond purchase price</td>
+            <td>Capital gains on appreciation</td>
+            <td>LTCG rate (15%)</td>
+            <td>Capital gains on appreciation</td>
+          </tr>
+          <tr>
+            <td>State tax (CA 9.3%)</td>
+            <td>$930</td>
+            <td>$140 on discount</td>
+            <td>$930</td>
+          </tr>
+          <tr>
+            <td>Net tax on the equity event</td>
+            <td>~$4,130</td>
+            <td>~$620 + LTCG on gains</td>
+            <td>~$4,130</td>
+          </tr>
+          <tr>
+            <td>Advantage vs RSU</td>
+            <td>—</td>
+            <td><strong>Save ~$3,510</strong></td>
+            <td>No advantage</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p>The qualifying ESPP is dramatically more tax-efficient — but only if you hold. Most employees sell immediately after purchase ("same-day sale"), turning a qualifying event into a disqualifying one and wiping out the entire tax advantage.</p>
+
+      <h2>The ESPP Holding Period Trap</h2>
+
+      <p>Here's the math that surprises people: a 15% discount from the purchase date sounds like a guaranteed win. But consider that the "offering date" price — the lower of the stock price at the start or end of the offering period — can be set 24 months in the past. If your company's stock is volatile, the spread between what you paid and what the stock is worth on purchase day can be massive. And all of that spread is ordinary income in a disqualifying disposition.</p>
+
+      <div class="emphasis-box">
+        Example: Marcus contributes $15,000 to his ESPP. The offering price was set when stock traded at $100. By purchase date, stock is at $150. He buys at $85 (15% off $100). He immediately sells at $150. His ordinary income isn't just $15 (the 15% discount) — it's $65 per share (the full spread from purchase price to FMV). On 176 shares, that's $11,440 in ordinary income — taxed at 37%. He would have been better off never contributing.
+      </div>
+
+      <p>The lesson: before enrolling in an ESPP, model the worst case. If your company is volatile and you can't commit to the holding period, the guaranteed-discount marketing can be misleading.</p>
+
+      <h2>Which Should You Prioritize?</h2>
+
+      <p>Most financial advisors will tell you: maximize your ESPP contribution if you can hold qualifying. Here's why the math usually works:</p>
+
+      <ul>
+        <li>The <strong>15% guaranteed discount</strong> plus a lookback provision means your breakeven on the stock is substantially lower than market price. Even with stock appreciation risk, that's a meaningful cushion.</li>
+        <li><strong>RSU taxes are unavoidable</strong> — you owe ordinary income the moment they vest, regardless of whether you sell. You can't defer them.</li>
+        <li>With a <strong>qualifying ESPP</strong>, you effectively convert 85% of your ESPP income into long-term capital gains, paying 15% instead of 37% on that portion.</li>
+      </ul>
+
+      <p>That said, prioritization depends on your concentration risk. If both your salary and your equity are tied to the same company, holding ESPP shares for 2 years adds significant single-stock exposure. The tax savings may not justify the risk if the stock drops 30% while you're waiting to qualify.</p>
+
+      <h2>Practical Tax-Minimization Moves</h2>
+
+      <p>Given both instruments, here's what sophisticated equity holders do:</p>
+
+      <ul>
+        <li><strong>For RSUs:</strong> Sell immediately at vesting (unless you have strong conviction) to reset your cost basis. Holding only makes sense if you'd buy the stock with after-tax cash at the current price. Most people wouldn't — so most people shouldn't hold.</li>
+        <li><strong>For RSUs:</strong> Make estimated quarterly tax payments equal to the difference between your 22% withholding and your actual marginal rate. If you're in the 37% bracket, that's an additional 15% of your RSU value due quarterly to avoid underpayment penalties.</li>
+        <li><strong>For ESPPs:</strong> Contribute the maximum allowed (typically 10–15% of salary up to IRS limits). Model whether you can genuinely hold 1 year from purchase date and 2 years from offering date before enrolling. If the answer is no, still contribute — the 15% discount is almost always worth it even in a disqualifying disposition — but sell quickly to limit stock price risk.</li>
+        <li><strong>For ESPPs:</strong> Track your offering date carefully. The 2-year clock starts from the offering date, not the purchase date. Many employees miscalculate and sell one month too early.</li>
+      </ul>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Are RSUs or ESPPs better if my company's stock is likely to go up a lot?</h3>
+        <p>If you expect significant appreciation, ESPP qualifying dispositions become even more advantageous. The growth beyond your purchase price is taxed at LTCG rates (15–20%) instead of ordinary income rates (up to 37%). RSU gains after vesting are also LTCG-eligible if held 1+ year, but the initial vest value is still ordinary income. ESPP holders get the better deal on appreciation.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the maximum ESPP contribution limit for 2026?</h3>
+        <p>Under IRS Section 423, you can purchase a maximum of $25,000 in stock per calendar year under a qualified ESPP (measured at the offering date price, not the discounted purchase price). Many employees hit this cap and max it out — especially in high-cost-of-living tech hubs where salaries are sufficient to support the contribution level.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Do I owe taxes when RSUs vest even if I don't sell the shares?</h3>
+        <p>Yes — and this surprises many employees. RSU vesting is a taxable event regardless of whether you sell. The IRS treats the fair market value on the vesting date as ordinary income. Your employer should withhold taxes, but often only at the flat 22% supplemental rate. If your marginal rate is higher, you'll owe the difference when you file.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I lose money on an ESPP even with a 15% discount?</h3>
+        <p>Yes. If the stock drops more than 15% from your purchase price before you sell, you're in a loss position. The 15% discount provides a buffer, but it doesn't guarantee a profit. In a disqualifying disposition, your breakeven is your purchase price. In a qualifying disposition, you also need to account for the 15% discount being taxed as ordinary income at sale, which reduces your effective discount to about 9–10% after tax at high income levels.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What's the difference between an RSU and an RSA?</h3>
+        <p>RSUs are promises to deliver shares in the future — you don't own anything until vesting. RSAs (Restricted Stock Awards) transfer shares to you at grant, subject to forfeiture restrictions. Because you legally own RSAs immediately, you can file an 83(b) election within 30 days of grant to be taxed on the current (usually low) value rather than the vested value. RSUs do not qualify for an 83(b) election. For more on 83(b) elections, see our <a href="https://www.withclearpath.com/blog/83b-election-explained.html">full 83(b) election guide</a>.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>Not Sure Which Equity Move Is Right for You?</h3>
+        <p>7 quick questions to find the #1 thing you should fix first — takes 60 seconds</p>
+        <a href="https://moneycheckupai.com/personal/" class="cta-button">Get Your Free Financial Health Check</a>
+      </div>
+
+      <p>Whether you're choosing between enrolling in an ESPP or planning around RSU vesting, the tax math should drive your decision. The strategies above — qualifying dispositions, quarterly estimated payments, and intentional sell-or-hold decisions — are how tech employees with identical equity grants end up with dramatically different after-tax outcomes. For more on RSU taxes specifically, see our <a href="https://www.withclearpath.com/blog/how-rsu-taxes-work.html">RSU tax guide with federal and state breakdown</a>. For questions about ISO or NSO options, see our <a href="https://www.withclearpath.com/blog/iso-vs-nso-complete-tax-comparison.html">complete ISO vs NSO comparison</a>.</p>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>ClearPath</h4>
+        <a href="https://www.withclearpath.com/">Home</a>
+        <a href="https://www.withclearpath.com/blog">Blog</a>
+        <a href="https://www.withclearpath.com/guides">Guides</a>
+      </div>
+      <div class="footer-section">
+        <h4>Equity Topics</h4>
+        <a href="https://www.withclearpath.com/blog/how-rsu-taxes-work.html">RSU Taxes</a>
+        <a href="https://www.withclearpath.com/blog/iso-vs-nso-complete-tax-comparison.html">ISO vs NSO</a>
+        <a href="https://www.withclearpath.com/blog/83b-election-explained.html">83(b) Election</a>
+        <a href="https://www.withclearpath.com/blog/amt-stock-options-explained.html">AMT & Options</a>
+      </div>
+      <div class="footer-section">
+        <h4>Tools</h4>
+        <a href="https://moneycheckupai.com/personal/">Financial Health Check</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 ClearPath. All rights reserved. This content is for educational purposes only and does not constitute tax or financial advice.
+    </div>
+  </footer>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "RSU vs ESPP: Which Gives You a Better Tax Deal?",
+    "description": "RSUs and ESPPs are taxed completely differently. Learn which one costs you more and how to plan smarter.",
+    "author": {
+      "@type": "Organization",
+      "name": "ClearPath"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClearPath",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.withclearpath.com/logo.png"
+      }
+    },
+    "datePublished": "2026-04-01",
+    "dateModified": "2026-04-01",
+    "url": "https://www.withclearpath.com/blog/rsu-vs-espp-tax-comparison"
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Are RSUs or ESPPs better if my company's stock is likely to go up a lot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "If you expect significant appreciation, ESPP qualifying dispositions become even more advantageous. The growth beyond your purchase price is taxed at LTCG rates (15–20%) instead of ordinary income rates (up to 37%). RSU gains after vesting are also LTCG-eligible if held 1+ year, but the initial vest value is still ordinary income. ESPP holders get the better deal on appreciation."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the maximum ESPP contribution limit for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Under IRS Section 423, you can purchase a maximum of $25,000 in stock per calendar year under a qualified ESPP (measured at the offering date price). Many employees hit this cap, especially in high-cost-of-living tech hubs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I owe taxes when RSUs vest even if I don't sell the shares?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. RSU vesting is a taxable event regardless of whether you sell. The IRS treats the fair market value on the vesting date as ordinary income. Your employer withholds taxes, but often only at the flat 22% supplemental rate. If your marginal rate is higher, you'll owe the difference when you file."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I lose money on an ESPP even with a 15% discount?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. If the stock drops more than 15% from your purchase price before you sell, you're in a loss position. The 15% discount provides a buffer but doesn't guarantee a profit."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What's the difference between an RSU and an RSA?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "RSUs are promises to deliver shares in the future — you don't own anything until vesting. RSAs transfer shares to you at grant, subject to forfeiture restrictions. Because you legally own RSAs immediately, you can file an 83(b) election within 30 days of grant. RSUs do not qualify for an 83(b) election."
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="How much tax do you owe when pre-IPO stock vests? Learn the real numbers on RSUs, ISOs, NSOs, and AMT for startup employees before their company goes public.">
+  <meta name="keywords" content="pre-IPO stock taxes, pre-IPO RSU vesting, startup equity tax, IPO tax planning, AMT pre-IPO">
+  <meta property="og:title" content="How Much Tax Do You Owe When Pre-IPO Stock Vests?">
+  <meta property="og:description" content="Pre-IPO equity tax is more complex than most employees realize. Here's the real tax math before your company goes public.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://www.withclearpath.com/blog/pre-ipo-stock-vesting-taxes">
+  <meta property="article:published_time" content="2026-04-01">
+  <meta name="author" content="ClearPath">
+  <link rel="canonical" href="https://www.withclearpath.com/blog/pre-ipo-stock-vesting-taxes">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:wght@400;600&display=swap" rel="stylesheet">
+
+  <!-- Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-NTR797YP2Y"></script>
+  <script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-NTR797YP2Y');</script>
+
+  <title>How Much Tax Do You Owe When Pre-IPO Stock Vests? | ClearPath</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #FAFAF8;
+      color: #1A1A2E;
+      line-height: 1.6;
+    }
+
+    nav {
+      background-color: #FFFFFF;
+      border-bottom: 1px solid #E8E6E3;
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-brand {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #0D7C66;
+      text-decoration: none;
+      font-family: 'Source Serif 4', serif;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      text-decoration: none;
+      color: #1A1A2E;
+      font-size: 0.95rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover {
+      color: #0D7C66;
+    }
+
+    .hero {
+      max-width: 800px;
+      margin: 3rem auto 2rem;
+      padding: 0 2rem;
+      border-bottom: 3px solid #0D7C66;
+      padding-bottom: 2rem;
+    }
+
+    .hero h1 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 1rem;
+      line-height: 1.2;
+    }
+
+    .hero-meta {
+      font-size: 0.9rem;
+      color: #5A5A6E;
+      font-weight: 500;
+    }
+
+    .container {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 0 2rem 4rem;
+    }
+
+    .answer-box {
+      background-color: #E8F5F0;
+      border-left: 4px solid #0D7C66;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-size: 1.05rem;
+      line-height: 1.8;
+    }
+
+    .answer-box p {
+      margin: 0;
+    }
+
+    .article-body h2 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.8rem;
+      font-weight: 600;
+      margin-top: 2.5rem;
+      margin-bottom: 1.5rem;
+      color: #1A1A2E;
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body p {
+      margin-bottom: 1.5rem;
+      font-size: 1rem;
+      line-height: 1.8;
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin-left: 2rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .article-body li {
+      margin-bottom: 0.8rem;
+      line-height: 1.8;
+    }
+
+    .article-body strong {
+      font-weight: 600;
+      color: #0D7C66;
+    }
+
+    .emphasis-box {
+      background-color: #FFFFFF;
+      border-left: 4px solid #E8734A;
+      padding: 1.5rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-style: italic;
+      color: #5A5A6E;
+    }
+
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0;
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+    }
+
+    .comparison-table thead {
+      background-color: #0D7C66;
+    }
+
+    .comparison-table th {
+      color: #FFFFFF;
+      padding: 1rem;
+      text-align: left;
+      font-weight: 600;
+    }
+
+    .comparison-table td {
+      padding: 1rem;
+      border-bottom: 1px solid #E8E6E3;
+    }
+
+    .comparison-table tbody tr:hover {
+      background-color: #E8F5F0;
+    }
+
+    .calculation-box {
+      background-color: #FFFFFF;
+      border: 1px solid #E8E6E3;
+      padding: 2rem;
+      margin: 2rem 0;
+      border-radius: 4px;
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.95rem;
+      line-height: 2;
+    }
+
+    .calculation-line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5rem 0;
+    }
+
+    .calculation-label {
+      font-weight: 500;
+    }
+
+    .calculation-value {
+      font-weight: 600;
+      color: #0D7C66;
+    }
+
+    .calculation-total {
+      border-top: 2px solid #E8E6E3;
+      padding-top: 1rem;
+      margin-top: 1rem;
+      font-weight: 700;
+    }
+
+    .faq-item {
+      margin-bottom: 2rem;
+      background-color: #FFFFFF;
+      padding: 1.5rem;
+      border-radius: 4px;
+      border: 1px solid #E8E6E3;
+    }
+
+    .faq-item h3 {
+      font-family: 'Source Serif 4', serif;
+      color: #0D7C66;
+      font-size: 1.1rem;
+      margin-bottom: 0.8rem;
+    }
+
+    .faq-item p {
+      font-size: 0.95rem;
+      line-height: 1.8;
+    }
+
+    .cta-box {
+      background-color: #E8F5F0;
+      border: 2px solid #0D7C66;
+      padding: 2.5rem;
+      margin: 3rem 0;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .cta-box h3 {
+      font-family: 'Source Serif 4', serif;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .cta-box p {
+      font-size: 1rem;
+      margin-bottom: 1.5rem;
+      color: #5A5A6E;
+      line-height: 1.8;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background-color: #E8734A;
+      color: #FFFFFF;
+      padding: 0.8rem 2rem;
+      text-decoration: none;
+      border-radius: 4px;
+      font-weight: 600;
+      transition: background-color 0.2s;
+      border: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    .cta-button:hover {
+      background-color: #d4622f;
+    }
+
+    footer {
+      background-color: #FFFFFF;
+      border-top: 1px solid #E8E6E3;
+      padding: 3rem 2rem;
+      margin-top: 4rem;
+    }
+
+    .footer-content {
+      max-width: 800px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .footer-section h4 {
+      font-weight: 600;
+      margin-bottom: 1rem;
+      color: #1A1A2E;
+    }
+
+    .footer-section a {
+      display: block;
+      color: #5A5A6E;
+      text-decoration: none;
+      margin-bottom: 0.5rem;
+      font-size: 0.9rem;
+      transition: color 0.2s;
+    }
+
+    .footer-section a:hover {
+      color: #0D7C66;
+    }
+
+    .footer-bottom {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid #E8E6E3;
+      text-align: center;
+      font-size: 0.85rem;
+      color: #5A5A6E;
+    }
+
+    @media (max-width: 768px) {
+      nav { flex-direction: column; gap: 1rem; padding: 1rem; }
+      .nav-links { gap: 1rem; }
+      .hero h1 { font-size: 2rem; }
+      .hero, .container { padding: 0 1rem; }
+      .article-body h2 { font-size: 1.5rem; }
+      .comparison-table { font-size: 0.9rem; }
+      .comparison-table th, .comparison-table td { padding: 0.75rem; }
+      .cta-box { padding: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="https://www.withclearpath.com/" class="nav-brand">ClearPath</a>
+    <ul class="nav-links">
+      <li><a href="https://www.withclearpath.com/guides">Guides</a></li>
+      <li><a href="https://www.withclearpath.com/blog">Blog</a></li>
+      <li><a href="https://www.withclearpath.com/tools">Tools</a></li>
+    </ul>
+  </nav>
+
+  <header class="hero">
+    <h1>How Much Tax Do You Owe When Pre-IPO Stock Vests?</h1>
+    <p class="hero-meta">April 1, 2026 &nbsp;·&nbsp; 10 min read</p>
+  </header>
+
+  <main class="container">
+    <div class="answer-box">
+      <p><strong>The quick answer:</strong> It depends on your equity type. Pre-IPO RSUs are taxed as ordinary income (22–37% federal) at vesting — but because shares aren't tradeable, you owe real cash taxes on illiquid paper wealth. ISOs trigger no ordinary income at exercise, but the spread is an AMT preference item and can trigger an AMT bill up to 28% of the spread. NSOs trigger ordinary income at exercise equal to the spread between FMV and strike price. On a $200,000 pre-IPO equity event, total federal and state tax could range from $0 (strategic ISO exercise) to over $90,000 (NSO exercise in a high-tax state).</p>
+    </div>
+
+    <div class="article-body">
+
+      <h2>Why Pre-IPO Equity Tax Is a Different Problem</h2>
+
+      <p>At a public company, tax planning is uncomfortable but manageable. When your RSUs vest at Google or Amazon, you get taxable income and your brokerage account fills up with liquid shares you can immediately sell to cover the tax bill. It's painful, but it's automatic.</p>
+
+      <p>Pre-IPO equity is fundamentally different. Your shares may be worth a fortune on paper — valued by the latest venture funding round — but you can't sell them. There's no public market. Yet the IRS may still want its cut. This creates the signature pre-IPO tax trap: owing real cash on illusory wealth.</p>
+
+      <p>The severity of this problem depends on which type of equity you hold: RSUs, ISOs (Incentive Stock Options), or NSOs (Non-Qualified Stock Options). Each works differently. Each is taxed differently. And each requires a completely different planning approach.</p>
+
+      <h2>Pre-IPO RSUs: The Illiquid Ordinary Income Problem</h2>
+
+      <p>Most people think of RSUs as a public-company benefit. But some pre-IPO companies — especially late-stage startups with high valuations — grant RSUs to employees. The mechanics are the same as public RSUs, but the tax consequence is far more dangerous.</p>
+
+      <p>When pre-IPO RSUs vest, the fair market value (usually based on the most recent 409A valuation) is ordinary income. Your employer withholds at the 22% supplemental rate. But if you're a mid-level engineer at a well-funded startup, the FMV might be $50 or $100 per share — creating a six-figure tax bill on shares you can't sell.</p>
+
+      <div class="emphasis-box">
+        Priya is a senior engineer at a Series D startup. 10,000 RSUs vest this quarter. The most recent 409A valuation: $35/share. Taxable income: $350,000. Federal tax (37% bracket): ~$129,500. California state: ~$46,500. Total tax: ~$176,000. Priya cannot sell a single share. She needs $176,000 in cash or estimated payments — from her salary alone.
+      </div>
+
+      <p>Some companies address this by providing liquidity (tender offers, secondary market transactions) concurrent with large vesting events. Others simply don't. If yours doesn't, consider whether accepting RSU grants at a high-valued pre-IPO company is worth the liquidity risk before you're committed.</p>
+
+      <p>One solution available to some employees: <strong>double-trigger RSUs</strong>, which vest only when both a time condition AND a liquidity event (like an IPO) are met simultaneously. This structure defers the tax event until you can actually sell shares. Ask your startup's equity team whether your grants are single-trigger or double-trigger.</p>
+
+      <h2>ISOs: No Tax at Exercise — But AMT Is Waiting</h2>
+
+      <p>Incentive Stock Options are the most tax-advantaged equity form available to pre-IPO employees. The basic promise: you can exercise ISOs and owe zero ordinary income tax at exercise. You only owe tax when you sell — and if you hold long enough, that sale is taxed at long-term capital gains rates (15–20%).</p>
+
+      <p>The catch: the spread between your exercise price and FMV at exercise is an AMT preference item. If it's large enough, it triggers the Alternative Minimum Tax.</p>
+
+      <p>For 2026, the AMT exemption is $137,000 for single filers ($220,000 married). The AMT rate is 26% on the first $220,700 of AMT income, and 28% above that. Once your ISO spread exceeds the exemption, you're paying a parallel tax calculation and owing whichever is higher — regular tax or AMT.</p>
+
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Equity Type</th>
+            <th>Tax at Exercise/Vest</th>
+            <th>Tax at Sale (held 1+ yr)</th>
+            <th>AMT Risk?</th>
+            <th>Illiquidity Problem?</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Pre-IPO RSU (single-trigger)</td>
+            <td>Ordinary income on full FMV</td>
+            <td>LTCG on appreciation</td>
+            <td>No</td>
+            <td>High — tax bill on unsellable shares</td>
+          </tr>
+          <tr>
+            <td>Pre-IPO RSU (double-trigger)</td>
+            <td>No tax until liquidity event</td>
+            <td>Ordinary income on vest FMV</td>
+            <td>No</td>
+            <td>Low — taxed when you can sell</td>
+          </tr>
+          <tr>
+            <td>ISO (exercise pre-IPO)</td>
+            <td>Zero ordinary income</td>
+            <td>LTCG on full gain</td>
+            <td>Yes — spread is AMT item</td>
+            <td>Moderate — AMT due before liquidity</td>
+          </tr>
+          <tr>
+            <td>NSO (exercise pre-IPO)</td>
+            <td>Ordinary income on spread</td>
+            <td>LTCG on further appreciation</td>
+            <td>No</td>
+            <td>High — tax due on illiquid spread</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>The ISO Early Exercise Strategy: Filing an 83(b) Election</h2>
+
+      <p>For ISOs (and some NSOs) at early-stage startups, the best tax move is usually to exercise early — when the 409A valuation is still close to the strike price, making the spread tiny or zero. Combined with an 83(b) election filed within 30 days of exercise, you can lock in your cost basis at the current (low) valuation and start your long-term capital gains holding period immediately.</p>
+
+      <p>Here's why this is so powerful:</p>
+
+      <div class="calculation-box">
+        <p><strong>Early Exercise Example: David, Engineer at Seed-Stage Startup</strong></p>
+        <div class="calculation-line">
+          <span class="calculation-label">Options granted: 100,000 ISOs</span>
+          <span class="calculation-value">Strike price: $0.10/share</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">FMV at exercise (409A valuation)</span>
+          <span class="calculation-value">$0.12/share</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">AMT spread (exercise today)</span>
+          <span class="calculation-value">$2,000 ($0.02 × 100,000)</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">Tax owed today (below AMT exemption)</span>
+          <span class="calculation-value">~$0</span>
+        </div>
+        <div class="calculation-line">
+          <span class="calculation-label">Company IPOs 3 years later at $25/share</span>
+          <span class="calculation-value">Value: $2,500,000</span>
+        </div>
+        <div class="calculation-line calculation-total">
+          <span class="calculation-label">Tax on sale (LTCG 20% on $2,490,000 gain)</span>
+          <span class="calculation-value">~$498,000 (vs $925,000+ as ordinary income)</span>
+        </div>
+      </div>
+
+      <p>The difference between exercising early with an 83(b) election versus waiting until IPO and treating the full gain as ordinary income can be hundreds of thousands of dollars on the same equity grant. The 83(b) election is covered in detail in our <a href="https://www.withclearpath.com/blog/83b-election-explained.html">83(b) election guide</a> — including the 30-day deadline and how to file correctly.</p>
+
+      <h2>NSOs: Ordinary Income You Can't Defer</h2>
+
+      <p>Non-Qualified Stock Options trigger ordinary income tax at exercise — the spread between strike price and FMV is taxed just like salary. Unlike ISOs, there's no AMT treatment, but there's also no way to avoid ordinary income rates by holding the options longer.</p>
+
+      <p>For pre-IPO employees with NSOs, the planning strategy is usually to exercise in tranches — exercising enough options each year to stay within a favorable tax bracket rather than exercising everything at once and pushing a massive spread into the 37% bracket.</p>
+
+      <p>For more on how NSOs compare to ISOs, including a complete tax walkthrough, see our <a href="https://www.withclearpath.com/blog/iso-vs-nso-complete-tax-comparison.html">ISO vs NSO comparison article</a>.</p>
+
+      <h2>Quarterly Estimated Taxes: Your Cash Flow Lifeline</h2>
+
+      <p>Whatever equity type you hold, if you expect a significant pre-IPO tax event this year, you need quarterly estimated tax payments. The IRS imposes underpayment penalties if you owe more than $1,000 at filing and didn't pay in estimates.</p>
+
+      <p>2026 estimated tax due dates: April 15, June 16, September 15, and January 15, 2027. Each payment should cover approximately 25% of your expected annual tax liability. If your equity situation changes mid-year (a new vesting cliff, tender offer, or secondary sale), recalculate immediately.</p>
+
+      <h2>What Happens to Your Options if the IPO Happens Faster Than Expected?</h2>
+
+      <p>When your company files for an IPO, timing changes. Most companies impose a 180-day lockup period post-IPO, meaning employees can't sell for six months after trading begins. During this window, any vesting RSUs become taxable — at the new, presumably much higher, public market price. This is when tax surprises peak.</p>
+
+      <p>If an IPO is 6–18 months away, the best moves are to exercise ISOs now (to start the LTCG clock and limit AMT exposure at lower valuations), model the post-IPO RSU tax bill against your salary income, and set aside reserves.</p>
+
+      <p>If your company has already filed an S-1, the window for proactive planning has mostly closed. At that point the goal shifts to managing the lockup period and selling strategically during trading windows post-lockup. See our guide on <a href="https://www.withclearpath.com/blog/what-happens-to-stock-options-when-you-leave.html">what happens to your options when you leave</a> for related exit timing considerations.</p>
+
+      <h2>Frequently Asked Questions</h2>
+
+      <div class="faq-item">
+        <h3>Do I owe taxes on pre-IPO RSUs if I can't sell the shares?</h3>
+        <p>Yes — if your RSUs are single-trigger (vest on a time schedule only), the IRS taxes the fair market value at vesting as ordinary income, even if there's no public market and you can't sell. You owe real cash taxes on paper gains. If your RSUs are double-trigger, both a time condition and a liquidity event (like an IPO) must occur, so the tax event is deferred until you have liquidity. Always confirm which structure your grants use.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is the AMT exemption for 2026?</h3>
+        <p>For 2026, the AMT exemption is $137,000 for single filers and $220,000 for married filing jointly. The AMT rate is 26% on AMT income up to $220,700 and 28% above that. ISO spreads count as AMT preference items — if your ISO spread exceeds the exemption amount, you likely owe AMT. Running a projection before exercising ISOs is critical to understanding your true tax cost.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>Can I exercise ISOs before an IPO to save on taxes?</h3>
+        <p>Yes — early exercise of ISOs when the 409A valuation is low (and therefore the spread is small) is one of the most powerful tax strategies for startup employees. When combined with an 83(b) election filed within 30 days, you start your LTCG holding period at exercise and owe minimal or no AMT on the tiny spread. The risk is that you pay cash to exercise shares that may become worthless if the company fails. Exercise only what you can afford to lose.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What is a 409A valuation and how does it affect my taxes?</h3>
+        <p>A 409A valuation is an independent appraisal of your company's common stock fair market value, required by the IRS for setting strike prices on options. It determines the FMV used to calculate your tax liability when you exercise options or vest RSUs. Companies typically update their 409A every 12 months or after a major funding round. A higher 409A means a larger taxable spread when you exercise; a lower 409A means a smaller spread and therefore a smaller tax bill.</p>
+      </div>
+
+      <div class="faq-item">
+        <h3>What happens to my unvested options if my startup gets acquired before an IPO?</h3>
+        <p>Acquisition treatment of unvested equity varies by deal structure. In a stock-for-stock merger, unvested options may be converted to unvested options in the acquirer — continuing on the same vesting schedule. In a cash acquisition, unvested options might be accelerated (single or double-trigger acceleration), paid out in cash, or cancelled, depending on your grant agreement. Read your option agreement carefully, and see our article on <a href="https://www.withclearpath.com/blog/what-happens-to-stock-options-when-you-leave.html">what happens to options when you leave</a> for related context.</p>
+      </div>
+
+      <!-- CTA -->
+      <div class="cta-box">
+        <h3>Pre-IPO Tax Planning Feels Overwhelming. Start Here.</h3>
+        <p>7 quick questions to find the #1 thing you should fix first — takes 60 seconds</p>
+        <a href="https://moneycheckupai.com/personal/" class="cta-button">Get Your Free Financial Health Check</a>
+      </div>
+
+      <p>Pre-IPO equity is one of the most complex and high-stakes tax situations a person can face. The numbers are large, the rules are counterintuitive, and the planning window is narrow. The employees who come out ahead are the ones who model their scenarios early, exercise ISOs strategically, file 83(b) elections on time, and maintain cash reserves for the tax bills that arrive before any liquidity event does.</p>
+
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>ClearPath</h4>
+        <a href="https://www.withclearpath.com/">Home</a>
+        <a href="https://www.withclearpath.com/blog">Blog</a>
+        <a href="https://www.withclearpath.com/guides">Guides</a>
+      </div>
+      <div class="footer-section">
+        <h4>Equity Topics</h4>
+        <a href="https://www.withclearpath.com/blog/how-rsu-taxes-work.html">RSU Taxes</a>
+        <a href="https://www.withclearpath.com/blog/iso-vs-nso-complete-tax-comparison.html">ISO vs NSO</a>
+        <a href="https://www.withclearpath.com/blog/83b-election-explained.html">83(b) Election</a>
+        <a href="https://www.withclearpath.com/blog/amt-stock-options-explained.html">AMT & Options</a>
+      </div>
+      <div class="footer-section">
+        <h4>Tools</h4>
+        <a href="https://moneycheckupai.com/personal/">Financial Health Check</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      &copy; 2026 ClearPath. All rights reserved. This content is for educational purposes only and does not constitute tax or financial advice.
+    </div>
+  </footer>
+
+  <!-- Article Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "How Much Tax Do You Owe When Pre-IPO Stock Vests?",
+    "description": "Pre-IPO equity tax is more complex than most employees realize. Here's the real tax math on RSUs, ISOs, NSOs, and AMT before your company goes public.",
+    "author": {
+      "@type": "Organization",
+      "name": "ClearPath"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "ClearPath",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.withclearpath.com/logo.png"
+      }
+    },
+    "datePublished": "2026-04-01",
+    "dateModified": "2026-04-01",
+    "url": "https://www.withclearpath.com/blog/pre-ipo-stock-vesting-taxes"
+  }
+  </script>
+
+  <!-- FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I owe taxes on pre-IPO RSUs if I can't sell the shares?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — if your RSUs are single-trigger, the IRS taxes the fair market value at vesting as ordinary income, even if there's no public market. You owe real cash taxes on paper gains. Double-trigger RSUs defer the tax event until a liquidity event."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is the AMT exemption for 2026?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For 2026, the AMT exemption is $137,000 for single filers and $220,000 for married filing jointly. The AMT rate is 26% on AMT income up to $220,700 and 28% above that. ISO spreads count as AMT preference items."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I exercise ISOs before an IPO to save on taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes — early exercise of ISOs when the 409A valuation is low is one of the most powerful tax strategies. Combined with an 83(b) election filed within 30 days, you start your LTCG holding period at exercise and owe minimal or no AMT on the small spread. The risk is that shares may become worthless if the company fails."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a 409A valuation and how does it affect my taxes?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A 409A valuation is an independent appraisal of your company's common stock fair market value, required by the IRS for setting strike prices on options. It determines the FMV used to calculate your tax liability when you exercise options or vest RSUs."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What happens to my unvested options if my startup gets acquired before an IPO?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Acquisition treatment varies by deal structure. In stock-for-stock mergers, unvested options may convert to acquirer options. In cash acquisitions, they might be accelerated, paid out, or cancelled. Read your grant agreement carefully to understand your specific terms."
+        }
+      }
+    ]
+  }
+  </script>
+
+</body>
+</html>
